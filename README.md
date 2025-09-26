@@ -68,4 +68,3 @@ Certifique-se de que você tem o Node.js e o npm instalados em seu sistema.
     ```bash
     npm run dev
     ```
-2.  Abra seu navegador e acesse: `http://localhost:5173` (ou a porta indicada pelo Vite).
