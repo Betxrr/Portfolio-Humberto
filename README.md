@@ -15,9 +15,9 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
 ## 🚀 Planejamento (Roadmap)
 
 ### Fase 1: Configuração e Estrutura Inicial
--   [  ] Criar o projeto com o Vite.
--   [  ] Instalar as dependências essenciais (`react-router-dom`, `framer-motion`).
--   [  ] Configurar a estrutura de pastas.
+-   [ X ] Criar o projeto com o Vite.
+-   [ X ] Instalar as dependências essenciais (`react-router-dom`, `framer-motion`).
+-   [ X ] Configurar a estrutura de pastas.
 
 ### Fase 2: Desenvolvimento do Layout e Animações
 -   [  ]**Header e Footer:** Criar componentes de navegação e rodapé reutilizáveis.
