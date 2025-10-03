@@ -20,7 +20,7 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
 -   [ X ] Configurar a estrutura de pastas.
 
 ### Fase 2: Desenvolvimento do Layout e Animações
--   [  ]**Header e Footer:** Criar componentes de navegação e rodapé reutilizáveis.
+-   [ X ]**Header e Footer:** Criar componentes de navegação e rodapé reutilizáveis.
 -   [  ]**Página Home:** Desenvolver a seção principal com uma apresentação pessoal e animações de entrada.
 -   [  ]**Animações e Efeitos Visuais:**
     -   Implementar animações de rolagem para que elementos apareçam gradualmente.

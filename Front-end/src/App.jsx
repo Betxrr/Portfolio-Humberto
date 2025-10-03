@@ -1,21 +1,22 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import Header from "./components/layouts/Header.jsx";
+import Footer from "./components/layouts/Footer.jsx";
+import Hero from "./components/sections/Hero.jsx";
+import Works from "./components/sections/Works.jsx";
+import Resume from "./components/sections/Resume.jsx";
+import Contact from "./components/sections/Contact.jsx";
 
 export default function App() {
   return (
-    <div>
-      <div className="TopperContainer">
-        <h1></h1>
-      </div>
-
-      <div className="BodyContainer">
-        <Routes>
-          <Route path="/" element={<h1>Home Page</h1>} />
-          <Route   path="/about" element={<h1>About Page</h1>} />
-          <Route path="/projects" element={<h1>Projects Page</h1>} />
-          <Route path="/contact" element={<h1>Contact Page</h1>} />
-        </Routes>
-      </div>
+    <div className="app">
+      <Header />
+      <main>
+        <Hero />
+        <Works />
+        <Resume />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
