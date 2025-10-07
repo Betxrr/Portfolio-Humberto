@@ -2,7 +2,6 @@
     display: flex;
     align-items: center; 
     
-    /* Posicionamento fixo */
     position: fixed;
     top: 0;
     left: 0;

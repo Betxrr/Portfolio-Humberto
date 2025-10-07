@@ -7,9 +7,7 @@ export default function TextPagination() {
   const PageText = [
     <div>
       <h4>TitleAboutText1</h4>
-      <p>
-       AboutTextPage1
-         </p>
+      <p>AboutTextPage1</p>
     </div>,
     <div>
       <h4>Do Processo Criativo ao Código</h4>
@@ -53,34 +51,41 @@ export default function TextPagination() {
   const [Page, SetPage] = useState(0);
 
   return (
-    <div className={style.TextContainer}>
-      <div className={style.LeftButton}>
-        <button
-          style={{
-            background: "rgba(0, 0, 0, 0.767)",
-            borderRadius: "8px",
-            padding: "8px 12px",
-            border: "none",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.08)"
-          }}
-        >
-          <FaChevronLeft color="#fff" size={32} />
-        </button>
+    <>
+      <div className={style.TextContainer}>
+        <div className={style.LeftButton}>
+          <button
+            style={{
+              background: "rgba(0, 0, 0, 0.767)",
+              borderRadius: "8px",
+              padding: "8px 12px",
+              border: "none",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            }}
+          >
+            <FaChevronLeft color="#fff" size={32} />
+          </button>
+        </div>
+        <div className={style.TextArea}>{PageText[Page]}</div>
+        <div className={style.RightButton}>
+          <button
+            style={{
+              background: "rgba(0, 0, 0, 0.767)",
+              borderRadius: "8px",
+              padding: "8px 12px",
+              border: "none",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            }}
+          >
+            <FaChevronRight color="#fff" size={32} />
+          </button>
+        </div>
       </div>
-      <div className={style.TextArea}>{PageText[Page]}</div>
-      <div className={style.RightButton}>
-        <button
-          style={{
-            background: "rgba(0, 0, 0, 0.767)",
-            borderRadius: "8px",
-            padding: "8px 12px",
-            border: "none",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.08)"
-          }}
-        >
-          <FaChevronRight color="#fff" size={32} />
-        </button>
+      <div className={style.PageInfoContainer}>
+        <p className={style.PageInfo}>
+          Página {Page + 1} de {PageText.length}
+        </p>
       </div>
-    </div>
+    </>
   );
 }

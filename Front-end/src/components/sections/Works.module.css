@@ -1,20 +1,99 @@
 .section {
-
     display: flex;
     min-height: 90vh;
-    border: 2px solid red;
-    background: #fff;
-    color: rgb(255, 255, 255);
+    background: #212121af;
+    color: white;
+    align-items: center;
+    justify-content: center;
 }
 
 .Limiter {
     width: 100%;
     max-width: 95%;
     margin: auto;
-    border: 2px solid  blueviolet;
     padding: 24px 32px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+.ContainerBox {
+  width: 95%;
+  margin: auto;
+  background: #fff;
+  border-radius: 28px;
+  padding: 32px 24px;
+  z-index: 2;
+  height: 650px;
+  border: gray solid 2px ;  
+}
+
+.ProjectsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.ProjectCard {
+    flex: 1 1 28%;
+    min-width: 320px;
+    max-width: 33%;
+    background: #181818;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+}
+
+.ProjectImage {
+    width: 100%;
+    height: 140px;
+    background: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ProjectInfo {
+    padding: 18px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #232323;
+}
+
+.ProjectName {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #c62828;
+    letter-spacing: 1px;
+}
+
+.ProjectDescription {
+    font-size: 1rem;
+    color: #bdbdbd;
+    margin-bottom: 12px;
+}
+
+.ProjectLink {
+    color: #c62828;
+    background: transparent;
+    border: 1px solid #c62828;
+    padding: 6px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: background 0.2s, color 0.2s;
+}
+
+.ProjectLink:hover {
+    background: #c62828;
+    color: #fff;
 }

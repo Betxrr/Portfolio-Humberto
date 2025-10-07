@@ -15,6 +15,7 @@
 
 :root {
   --color-primary: #D14D52;
+  --color-primary-light: #fd666b;
   --color-secondary: #6c757d;
   --color-background: white;
   --color-background-dark: #4b4c4e;
@@ -24,20 +25,22 @@
 
 html {
   scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* ← ISSO resolve! */
+    scroll-padding-top: 80px;
 
 } 
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background:
+background:
+    linear-gradient(90deg, #fff 0%, #fff 35%, transparent 70%),
     url('/images/JapaneseGeometricDesign/Abstract-Image.jpg') no-repeat center center fixed;
+ 
   background-size: cover;
   background-color: var(--color-background);
   color: var(--color-text-dark);
-  min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
-  line-height: 0.8; /* Espaçamento entre linhas mais legível */
-  /* padding-top: 60px; Removido para o fundo encostar no topo */
+  min-height: 100vh; 
+  line-height: 0.8; 
+
 }
 
 .container {

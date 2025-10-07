@@ -58,15 +58,14 @@ export default function Resume() {
                     <span role="img" aria-label="SQL"></span>
                     ReusableSkillTagsSQLServer
                   </span>
-                  {/* Adicione mais tecnologias conforme desejar */}
                 </div>
               </div>
             </div>
           </div>
           <div>
             <div className={styles.ResumeRight}>
-                          <h3 className={styles.ResumeTitle}>Sobre Mim:</h3>
-
+              <h3 className={styles.ResumeTitle}>Sobre Mim:</h3>
+                <br />
               <div className={styles.ResumeText}>
                 <TextPagination />
               </div>

@@ -1,34 +1,84 @@
-/* Caixa base para conteúdo do Contact */
-.ContactBox {
-    width: 600px;
-    height: 300px;
-    margin: auto;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    border: 2px solid var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .section {
-
     display: flex;
     min-height: 45vh;
-    border: 2px solid green;
-    background: #fff;
-    color:white
-
+    background: #212121af;
+    color: white;
+    align-items: center;
+    justify-content: center;
 }
 
 .Limiter {
     width: 100%;
     max-width: 95%;
     margin: auto;
-    border: 2px solid yellow;
     padding: 24px 32px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+.ContactTitle {
+    color: var(--color-primary-light);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.ContactList {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 1.15rem;
+}
+
+.ContactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ContactLink {
+    color: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border-radius: 8px;
+    padding: 8px 18px;
+    transition: background 0.2s, color 0.2s;
+    background: transparent;
+}
+
+.ContactLink {
+    color: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.15rem;
+    width: fit-content;
+}
+
+.ContactGithub:hover {
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transform: translateY(-2px) scale(1.04);
+    color: rgb(0, 0, 0);
+}
+
+.ContactLinkDin:hover {
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transform: translateY(-2px) scale(1.04);
+    color: rgb(0, 152, 194);
+}
+
+.ContactDivider {
+    width: 250px;
+    height: 2px;
+    background: linear-gradient(to right, #fff 0%, transparent 100%);
+    margin: 12px 0;
 }

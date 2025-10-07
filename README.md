@@ -26,9 +26,9 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
     -   Implementar animações de rolagem para que elementos apareçam gradualmente.
     -   Criar efeitos dinâmicos, como o header que muda ao rolar a página.
     -   Adicionar micro-interações, como ícones flutuantes.
--   [  ]**Seção Sobre Mim:** Criar uma seção para descrever minha trajetória e filosofia de trabalho.
+-   [ X ]**Seção Sobre Mim:** Criar uma seção para descrever minha trajetória e filosofia de trabalho.
 -   [  ]**Seção de Projetos:** Desenvolver uma área para exibir os projetos futuros com um design atraente.
--   [  ]**Seção de Habilidades:** Listar as tecnologias que eu domino.
+-   [ X ]**Seção de Habilidades:** Listar as tecnologias que eu domino.
 
 ### Fase 3: Conteúdo e Refinamento
 -   [  ]Adicionar todo o conteúdo textual e visual do portfólio.

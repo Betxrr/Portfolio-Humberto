@@ -47,17 +47,20 @@
 }
 .section {
   min-height: 97.6vh;
-  border: 1px solid rgb(200, 200, 200);
+  border-top: 1px solid rgb(148, 148, 148);
+  border-left: 1px solid rgb(148, 148, 148);
+  border-right: 1px solid rgb(148, 148, 148);
   margin-top: -40px;
   z-index: 1;
   color: white;
-  background: #fff;
+  background: #212121af;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  box-shadow: 0 -8px 32px 0 rgba(0, 0, 0, 0.298);
+  box-shadow: 0 -25px 32px 0 rgba(0, 0, 0, 0.18); 
   scroll-margin-top: -55px;
   padding: 32px 0;
   padding-top: 65px;
+  
 }
 
 .ContainerBox {
@@ -65,13 +68,14 @@
   margin: auto;
   background: #fff;
   border-radius: 28px;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.12);
+  box-shadow: 15px 8px 32px 0 rgba(0, 0, 0, 0.411);
   padding: 32px 24px;
   z-index: 2;
-   height: 650px;
-  
+  height: 650px;
+  border: gray solid 2px ;
   
 }
+
 .ResumeFlex {
   display: flex;
   gap: 32px;
@@ -94,6 +98,7 @@
   overflow: hidden;
   border: 3px solid #fff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  border-radius: 50%;
 }
 
 .ResumeRight {
@@ -111,7 +116,6 @@
   margin-bottom: 18px;
   text-align: left;
   padding-left: 78px;
-  padding-top: 20px;
 }
 
 .ResumeText {
@@ -128,7 +132,7 @@
   .ResumeLeft {
     align-items: center;
     padding-top: 0;
-    margin-bottom: 24px;
+    padding-left: 0;
   }
   .ResumeRight {
     padding: 24px 10px;
