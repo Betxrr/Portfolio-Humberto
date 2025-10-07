@@ -16,7 +16,7 @@
     display: flex;
     min-height: 45vh;
     border: 2px solid green;
-    background-color: var(--color-background-dark);
+    background: #fff;
     color:white
 
 }

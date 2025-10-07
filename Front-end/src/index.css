@@ -14,7 +14,7 @@
 
 
 :root {
-  --color-primary: #c04e4e;
+  --color-primary: #D14D52;
   --color-secondary: #6c757d;
   --color-background: white;
   --color-background-dark: #4b4c4e;
@@ -30,6 +30,9 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background:
+    url('/images/JapaneseGeometricDesign/Abstract-Image.jpg') no-repeat center center fixed;
+  background-size: cover;
   background-color: var(--color-background);
   color: var(--color-text-dark);
   min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */

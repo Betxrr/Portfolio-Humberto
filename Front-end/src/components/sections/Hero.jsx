@@ -39,7 +39,6 @@ export default function Hero() {
 
       <div className={style.RightContainer}>
         <div className={style.ImageContainer}>
-         <h1>RightContainer</h1>
         </div>
       </div>
     </section>
