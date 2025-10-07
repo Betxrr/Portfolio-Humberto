@@ -1,0 +1,198 @@
+/* Limiter: quadrado centralizado que ocupa o tamanho exato da section */
+.Limiter {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border: 2px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    overflow: hidden;
+}
+.LinhaCentralizada {
+    width: 320px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary) 60%, #fff 100%);
+    margin: 18px auto;
+    border-radius: 2px;
+    border: none;
+    display: block;
+}
+.TopperLimiter {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--color-primary);
+    padding: 24px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.section {
+
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border: none;
+    position: relative;
+    z-index: 2;
+            background:
+                linear-gradient(90deg, #fff 0%, #fff 30%, transparent 70%),
+                url('/images/Abstract-Image.jpg') no-repeat center center fixed;
+            background-size: cover;
+}
+
+.LeftContainer {
+    flex: 1;
+    border: 2px solid blue;
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+
+    .NomePrincipal {
+        font-size: 3.3rem;
+        font-weight: bold;
+        color: #222;
+        margin: 0;
+        text-align: left;
+    }
+
+    .NomeSecundario {
+        font-size: 3.3rem;
+        font-weight: bold;
+        color: #222;
+        margin: 0;
+        text-align: right;
+    }
+
+
+    .Cargo {
+        font-size: 1.5rem;
+        color: #555;
+        margin-top: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .Tags {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 7px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+
+    .Descricao {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 50px;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+    }
+
+
+
+}
+
+.TopperLimiter {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--color-primary);
+    padding: 24px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+
+.BottomLimiter {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--color-primary);
+    padding:  24px 32px ;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 5px;
+}
+
+
+.RightContainer {
+    flex: 1;
+    border: 2px solid green;
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* Gradiente horizontal branco para transição */
+}
+
+.section div h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1;
+}
+
+
+
+.CaixaDeDialogo {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid white;
+    position: relative;
+    margin-bottom: 40px;
+    align-self: center;
+    width: auto;
+    min-width: unset;
+    max-width: 80%;
+}
+
+.TrianguloDialogo {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: 0px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.CaixaDeDialogo {
+    position: relative;
+}

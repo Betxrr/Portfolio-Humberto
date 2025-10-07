@@ -1,0 +1,21 @@
+.section {
+
+    display: flex;
+    min-height: 45vh;
+    border: 2px solid red;
+    background-color: var(--color-primary);
+    color:white
+
+}
+
+.Limiter {
+    width: 100%;
+    max-width: 95%;
+    margin: auto;
+    border: 2px solid blue;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}

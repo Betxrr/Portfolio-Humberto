@@ -16,7 +16,7 @@
 :root {
   --color-primary: #c04e4e;
   --color-secondary: #6c757d;
-  --color-background: #f8f9fa;
+  --color-background: white;
   --color-background-dark: #4b4c4e;
   --color-text-dark: #4b4c4e;
   --color-text-light: #ffffff;
@@ -26,15 +26,15 @@ html {
   scroll-behavior: smooth;
     scroll-padding-top: 80px; /* ← ISSO resolve! */
 
-}
+} 
 
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text-dark);
   min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
-  line-height: 1.5; /* Espaçamento entre linhas mais legível */
-  padding-top: 80px; /* Espaço para o header fixo não cobrir o conteúdo */
+  line-height: 0.8; /* Espaçamento entre linhas mais legível */
+  /* padding-top: 60px; Removido para o fundo encostar no topo */
 }
 
 .container {

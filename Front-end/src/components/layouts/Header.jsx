@@ -8,13 +8,13 @@ export default function Header() {
     return (
         <div className={styles.header}>
             <h1>H<span>RR</span></h1>
-            <span className={styles.emailContainer}><FaEnvelope /> humbertorodrigues473@gmail.com</span>
+            {/* <span className={styles.emailContainer}><FaEnvelope /> humbertorodrigues473@gmail.com</span> */}
             <nav>
                 <ul>
                     <li><a href="#hero"><FaHome /> Home</a></li>
-                    <li><a href="#resume"><IoDocumentText />About</a></li>
-                    <li><a href="#works"><FaBriefcase /> Works</a></li>
-                    <li><a href="#contact"><FaEnvelope /> Contact</a></li>
+                    <li><a href="#resume"><IoDocumentText />Sobre Mim</a></li>
+                    <li><a href="#works"><FaBriefcase /> Trabalhos </a></li>
+                    <li><a href="#contact"><FaEnvelope /> Contato</a></li>
                 </ul>
             </nav>
         </div>

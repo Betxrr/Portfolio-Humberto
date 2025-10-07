@@ -57,10 +57,19 @@ Certifique-se de que você tem o Node.js e o npm instalados em seu sistema.
     ```bash
     cd Portfolio-Humberto
     ```
-3.  Instale as dependências:
+3.  Navegue até a pasta Front-end:
+    ```bash
+    cd Front-end
+    ```
+4.  Instale as dependências:
     ```bash
     npm install
     ```
+5.  Instale o plugin necessário para o Tailwind CSS funcionar com PostCSS:
+    ```bash
+    npm install @tailwindcss/postcss --save-dev
+    ```
+    > **Observação:** O Tailwind CSS agora depende do pacote `@tailwindcss/postcss` para funcionar corretamente com PostCSS. Sem ele, o projeto não irá compilar os estilos.
 
 ### Executando o Projeto
 

@@ -8,15 +8,17 @@ import Contact from "./components/sections/Contact.jsx";
 
 export default function App() {
   return (
-    <div className="app">
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <main>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <Hero />
         <Resume />
         <Works />
-        <Contact />
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, margin: 0, padding: 0 }}>
+          <Contact style={{ flex: 1, marginBottom: 0 }} />
+          <Footer />
+        </div>
       </main>
-      <Footer />
     </div>
   );
 }

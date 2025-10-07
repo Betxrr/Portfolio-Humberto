@@ -1,0 +1,30 @@
+.section {
+
+    display: flex;
+    min-height: 90vh;
+    border: 2px solid red;
+    background:
+      linear-gradient(180deg, #fff 0%, var(--color-background-dark) 25%),
+      url('/images/Abstract-Image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin-top: -60px;
+    z-index: 1;
+    color: white;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+.Limiter {
+  width: 90%;
+  max-width: 900px;
+  margin: 80px auto 30px auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 2px solid var(--color-primary);
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 2;
+}

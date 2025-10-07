@@ -1,10 +1,15 @@
 import React from "react";
+import styles from './Works.module.css';
 
 export default function Works() {
     return (
-        <section id="works" style={{ minHeight: '100vh', padding: '4rem 2rem', backgroundColor: '#f8f9fa' }}>
-            <h2>Work section</h2>
-           
+        <section className={styles.section} id="works">
+           <div className={styles.Limiter}>
+            <h2>works section</h2>
+             
+                 
+            </div>
         </section>
     );
 }
+
