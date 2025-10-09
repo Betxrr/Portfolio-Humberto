@@ -15,13 +15,12 @@ export default function Hero() {
           <h3 className={style.Cargo}>Desenvolvedor Front-end</h3>
           <h3 className={style.Tags}>
             {" "}
-            <span style={{ color: "var(--color-primary)" }}>
-              Web{" "}
-            </span> |{" "}
+            <span style={{ color: "var(--color-primary)" }}>Web </span> |{" "}
             <span style={{ color: "var(--color-primary)" }}>Mobile</span>
           </h3>
           <p className={style.Descricao}>
-            Da concepção ao código, construo soluções front-end que unem funcionalidade, usabilidade e experiência de usuário 
+            Da concepção ao código, construo soluções front-end que unem
+            funcionalidade, usabilidade e experiência de usuário
           </p>
           <div className={style.LinhaCentralizada}></div>
         </div>
@@ -38,8 +37,7 @@ export default function Hero() {
       </div>
 
       <div className={style.RightContainer}>
-        <div className={style.ImageContainer}>
-        </div>
+        <div className={style.ImageContainer}></div>
       </div>
     </section>
   );

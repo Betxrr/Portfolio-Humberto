@@ -2,77 +2,105 @@ import React from "react";
 import styles from "./Resume.module.css";
 import TextPagination from "../Pagination/ResumeTextPagination.jsx";
 import { FiMapPin } from "react-icons/fi";
+import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import SkillTag from "../Tags/SkillTag.jsx";
+import { FaReact, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaMobileAlt } from "react-icons/fa";
+import { SiRedux } from 'react-icons/si';
+import { MdApi } from "react-icons/md";
+import { ImCog } from "react-icons/im";
+
 
 export default function Resume() {
-  return (
-    <section className={styles.section} id="resume">
-      <div className={styles.ContainerBox}>
-        <div className={styles.ResumeFlex}>
-          <div className={styles.ResumeLeft}>
-            <div className={styles.ResumePhoto}>
-              <img alt="Profile" src="/images/Profile-Image.jpg" />
-            </div>
-            <div
-              className={styles.ResumeText}
-              style={{
-                fontSize: "1.3rem",
-                fontWeight: "bold",
-                textAlign: "center",
-                marginTop: "8px",
-              }}
-            >
-              Humberto da Rosa Rodrigues
-            </div>
-            <div className={styles.LinhaCentralizada}></div>
+   return (
+      <section className={styles.section} id="resume">
+         <div className={styles.ContainerBox}>
+            <div className={styles.PrimaryColorBackground}>
+               <div className={styles.ResumeFlex}>
+                  <div className={styles.ResumeLeft}>
+                     <div className={styles.HeaderResumeLeft}>
+                        <div className={styles.ResumePhoto}>
+                           <img alt="Profile" src="/images/Profile-Image.jpg" />
+                        </div>
+                        <div className={styles.NomeCentralizado}>
+                           Humberto da Rosa Rodrigues
+                        </div>
+                     </div>
 
-            <div
-              className={styles.ResumeText}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "6px",
-                marginTop: "2px",
-              }}
-            >
-              <FiMapPin style={{ color: "#c62828", fontSize: "1.2em" }} />
-              Navegantes, Santa Catarina - Brasil
+                     <div className={styles.LinhaCentralizada}></div>
+
+                     <div className={styles.LocalizacaoTexto}>
+                        <FiMapPin className={styles.LocationIcon} />
+                        Navegantes, Santa Catarina - Brasil
+                     </div>
+                     <div className={styles.LocalizacaoTexto}>
+                        <AiOutlineMail className={styles.LocationIcon} />
+                        humbertorodrigues473@gmail.com
+                     </div>
+                     <div className={styles.LocalizacaoTexto}>
+                        <AiFillLinkedin className={styles.LocationIcon} />
+                        <a
+                           href="https://www.linkedin.com/in/humberto-rodrigues-a52b86373/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           linkedin.com/in/humberto-rodrigues-a52b86373/
+                        </a>
+                     </div>
+                     <div className={styles.LocalizacaoTexto}>
+                        <AiFillGithub className={styles.LocationIcon} />
+                        <a
+                           href="https://github.com/Betxrr"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           github.com/Betxrr
+                        </a>
+                     </div>
+
+                     <div className={styles.LinhaCentralizada}></div>
+
+                     <div className={styles.SkillsBox}>
+                        <div className={styles.SkillsSection}>
+                           <h4 className={styles.SkillsTitle}>Hard Skills:</h4>
+                           <div className={styles.SkillsList}>
+                              <SkillTag icon={FaReact} color="react">React Js</SkillTag>
+                              <SkillTag icon={FaMobileAlt} color="react-native">React Native CLI ( Android )</SkillTag>
+                              <SkillTag icon={ImCog} color="nestjs">Nest Js</SkillTag>
+                              <SkillTag icon={FaDatabase} color="sql">SQL Server</SkillTag>
+                              <SkillTag icon={FaJs} color="javascript">JavaScript</SkillTag>
+                              <SkillTag icon={FaCss3Alt} color="css">CSS</SkillTag>
+                              <SkillTag icon={FaGitAlt} color="git">Git</SkillTag>
+                              <SkillTag icon={AiFillGithub} color="github">GitHub</SkillTag>
+                              <SkillTag icon={SiRedux} color="redux">Redux (básico)</SkillTag>
+                              <SkillTag icon={MdApi} color="api">APIs REST (Express)</SkillTag>
+                           </div>
+                        </div>
+                <div className={styles.SkillsSection}>
+                           <h4 className={styles.SkillsTitle}>Soft Skills:</h4>
+                           <div className={styles.SkillsList}>
+                              <SkillTag color="soft-skill">Proatividade na resolução de problemas</SkillTag>
+                              <SkillTag color="soft-skill">Foco em entrega e resultado  </SkillTag>
+                              <SkillTag color="soft-skill">Organização e gestão de tempo</SkillTag>
+                              <SkillTag color="soft-skill">Trabalho em equipe</SkillTag>
+                              <SkillTag color="soft-skill">Adaptabilidade e aprendizado contínuo</SkillTag>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div className={styles.SkillsBox}>
-              <div className={styles.SkillsSection}>
-                <h4 className={styles.SkillsTitle}>Tecnologias que uso:</h4>
-                <div className={styles.SkillsList}>
-                  <span className={styles.SkillItem} title="React">
-                    <span role="img" aria-label="React"></span>
-                    ReusableSkillTagsReact
-                  </span>
-                  <span className={styles.SkillItem} title="JavaScript">
-                    <span role="img" aria-label="JavaScript"></span>
-                    ReusableSkillTagsJavaScript
-                  </span>
-                  <span className={styles.SkillItem} title="CSS">
-                    <span role="img" aria-label="CSS"></span>
-                    ReusableSkillTagsCSS
-                  </span>
-                  <span className={styles.SkillItem} title="SQL Server">
-                    <span role="img" aria-label="SQL"></span>
-                    ReusableSkillTagsSQLServer
-                  </span>
-                </div>
-              </div>
+            <div className={styles.WhiteBackground}>
+               <div>
+                  <div className={styles.ResumeRight}>
+                     <h3 className={styles.ResumeTitle}>Sobre Mim:</h3>
+                     <br />
+                     <div className={styles.ResumeText}>
+                        <TextPagination />
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-          <div>
-            <div className={styles.ResumeRight}>
-              <h3 className={styles.ResumeTitle}>Sobre Mim:</h3>
-                <br />
-              <div className={styles.ResumeText}>
-                <TextPagination />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+         </div>
+      </section>
+   );
 }

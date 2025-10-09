@@ -29,19 +29,8 @@ export default function Contact() {
                             href="https://www.linkedin.com/in/humberto-rodrigues-a52b86373/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={styles.ContactLink}
-                            style={{
-                                background: "#fff",
-                                borderRadius: "8px",
-                                padding: "8px 18px",
-                                color: "#1976d2",
-                                fontWeight: "bold",
-                                fontSize: "1.15rem",
-                                display: "flex",
-                                alignItems: "center",
-                                gap: "6px",
-                                boxShadow: "0 2px 8px rgba(0,0,0,0.08)"
-                            }}
+                            className={styles.ContactLinkdin}
+                       
                         >
                             <FaLinkedin size={28} color="#1976d2" />
                             LinkedIn
@@ -50,19 +39,8 @@ export default function Contact() {
                             href="https://github.com/Betxrr"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={styles.ContactLink}
-                            style={{
-                                background: "#fff",
-                                borderRadius: "8px",
-                                padding: "8px 18px",
-                                color: "#222",
-                                fontWeight: "bold",
-                                fontSize: "1.15rem",
-                                display: "flex",
-                                alignItems: "center",
-                                gap: "6px",
-                                boxShadow: "0 2px 8px rgba(0,0,0,0.08)"
-                            }}
+                            className={styles.ContactLinkGithub}
+
                         >
                             <FaGithub size={28} color="#222" />
                             GitHub

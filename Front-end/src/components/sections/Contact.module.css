@@ -37,22 +37,9 @@
     gap: 12px;
 }
 
-.ContactLink {
-    color: var(--color-primary-light);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.15rem;
-    border-radius: 8px;
-    padding: 8px 18px;
-    transition: background 0.2s, color 0.2s;
-    background: transparent;
-}
 
-.ContactLink {
-    color: var(--color-primary-light);
+.ContactLinkdin {
+    color: #1976d2;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -60,21 +47,49 @@
     font-weight: bold;
     font-size: 1.15rem;
     width: fit-content;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 18px;
+        border: 2px solid #606060;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.453);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
-.ContactGithub:hover {
+.ContactLinkdin:hover {
     background: #fff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
     transform: translateY(-2px) scale(1.04);
-    color: rgb(0, 0, 0);
+        border: 2px solid #606060;
+
+    color: #1976d2;
 }
 
-.ContactLinkDin:hover {
+.ContactLinkGithub {
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.15rem;
+    width: fit-content;
     background: #fff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    transform: translateY(-2px) scale(1.04);
-    color: rgb(0, 152, 194);
+    border-radius: 8px;
+    padding: 8px 18px;
+    border: 2px solid #606060;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.453);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
+
+.ContactLinkGithub:hover {
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px) scale(1.04);
+    color: #222;
+}
+
+
 
 .ContactDivider {
     width: 250px;

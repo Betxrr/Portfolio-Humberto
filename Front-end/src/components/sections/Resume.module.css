@@ -1,50 +1,83 @@
-/* Skills Template */
+:root {
+  --spacing-base: 1rem;
+  --spacing-small: 0.45rem;
+  --spacing-xsmall: 0.25rem;
+
+}
+
 .SkillsBox {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  align-items: center;
-  margin-top: 18px;
-  margin-bottom: 8px;
+  gap: var(--spacing-base);
+  margin-top: var(--spacing-base);
+  margin-bottom: var(--spacing-small);
 }
 
 .SkillsSection {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  gap: var(--spacing-small);
 }
 
 .SkillsTitle {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #c62828;
-  margin-bottom: 8px;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-small);
 }
 
 .SkillsList {
   display: flex;
   flex-direction: row;
-  gap: 12px;
-  justify-content: center;
+  gap: var(--spacing-xsmall);
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .SkillItem {
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: #f7f7f7;
-  color: #222;
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-size: 0.98rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-  transition: background 0.2s;
+  gap: var(--spacing-xsmall);
+  color: var(--color-text-light);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  background-color: var(--color-secondary-background);
+  color: var(--color-text-dark);
 }
-.SkillItem:hover {
-  background: #ffeaea;
+
+.skill-react {
+  background-color: #61DAFB;
+  color: var(--color-text-dark);
 }
+
+.skill-javascript {
+  background-color: #F7DF1E;
+  color: var(--color-text-dark);
+}
+
+.skill-css {
+  background-color: #1572B6;
+  color: var(--color-text-light);
+}
+
+.skill-sql {
+  background-color: #336791;
+  color: var(--color-text-light);
+}
+
+.contactItem {
+  background-color: #444;
+  color: var(--color-text-light);
+}
+
+.contactItem:hover {
+  background-color: #666;
+}
+
 .section {
   min-height: 97.6vh;
   border-top: 1px solid rgb(148, 148, 148);
@@ -56,72 +89,161 @@
   background: #212121af;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  box-shadow: 0 -25px 32px 0 rgba(0, 0, 0, 0.18); 
+  box-shadow: 0 -25px 32px 0 rgba(0, 0, 0, 0.18);
   scroll-margin-top: -55px;
   padding: 32px 0;
   padding-top: 65px;
-  
 }
 
 .ContainerBox {
-  width: 95%;
+  width: 97.5%;
   margin: auto;
   background: #fff;
   border-radius: 28px;
   box-shadow: 15px 8px 32px 0 rgba(0, 0, 0, 0.411);
-  padding: 32px 24px;
   z-index: 2;
-  height: 650px;
-  border: gray solid 2px ;
-  
+  height: 680px;
+  border: gray solid 2px;
+  display: flex;
+  flex-direction: row;
+}
+
+.PrimaryColorBackground {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border-top-left-radius: 26px;
+  border-bottom-left-radius: 26px;
+  font-weight: bold;
+  width: 750px;
+  align-items: center;
+  z-index: 3;
+}
+
+.HeaderResumeLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-small);
+  width: 100%;
+}
+
+.WhiteBackground {
+  background: white;
+  border-left: rgba(128, 128, 128, 0.396) solid 2px;
+  border-top-left-radius: 26px;
+  border-bottom-left-radius: 26px;
+  border-top-right-radius: 26px;
+  border-bottom-right-radius: 26px;
+  width: 1600px;
+  color: #222;
+  z-index: 3;
+  margin-left: -24px;
+  box-shadow: -12px 0 24px -8px rgba(0, 0, 0, 0.18);
 }
 
 .ResumeFlex {
   display: flex;
-  gap: 32px;
+  gap: var(--spacing-base);
   align-items: flex-start;
+  justify-content: center;
   width: 100%;
 }
 
 .ResumeLeft {
-  flex: 0.5;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 32px;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  margin: 1.25rem;
+  gap: var(--spacing-small);
+  box-sizing: border-box;
 }
 
 .ResumePhoto {
-  width: 160px;
-  height: 160px;
+  width: 12.25rem;
+  height: 11.625rem;
   overflow: hidden;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  border: 2px solid var(--color-text-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   border-radius: 50%;
+  margin-bottom: var(--spacing-xsmall);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ResumePhoto img {
+  width: 100%;
+  height: auto;
 }
 
 .ResumeRight {
-  width: 1100px;
-  height: 500px;
-  padding: 32px 24px;
-  border-radius: 24px;
-  margin: 0 8px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 1.25rem;
 }
 
 .ResumeTitle {
   font-size: 2rem;
   font-weight: bold;
   color: #c62828;
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
   text-align: left;
-  padding-left: 78px;
 }
 
 .ResumeText {
   font-size: 0.9em;
-  color: #222;
+  color: var(--color-text-dark);
   line-height: 1.7;
+}
+
+.LinhaCentralizada {
+  width: 13.75rem;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--color-text-light) 60%, transparent 100%);
+  margin: var(--spacing-small);
+  border-radius: 2px;
+  border: none;
+  display: block;
+}
+
+.NomeCentralizado {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2px;
+  color: white;
+}
+
+.LocalizacaoTexto {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85em;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.LocalizacaoTexto a {
+  color: #fff !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.LocalizacaoTexto a:hover {
+  color: #7aafe3 !important;
+  text-decoration: underline;
+}
+
+.LocationIcon {
+  color: #ffffff;
+  font-size: 1.2em;
 }
 
 @media (max-width: 900px) {
@@ -129,23 +251,22 @@
     flex-direction: column;
     gap: 0;
   }
+
   .ResumeLeft {
     align-items: center;
     padding-top: 0;
     padding-left: 0;
   }
+
   .ResumeRight {
     padding: 24px 10px;
     margin: 0;
   }
 }
 
-.LinhaCentralizada {
-    width: 380px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary) 60%, #fff 100%);
-    margin: 18px auto;
-    border-radius: 2px;
-    border: none;
-    display: block;
+.PhotoWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }

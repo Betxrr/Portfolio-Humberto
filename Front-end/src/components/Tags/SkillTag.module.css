@@ -1,0 +1,73 @@
+/* src/components/Tags/SkillTag.module.css */
+
+.skillTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 2px 0;
+  white-space: nowrap;
+}
+
+.react {
+  background-color: #61DAFB;
+  color: #222;
+}
+
+.javascript {
+  background-color: #F7DF1E;
+  color: #222;
+}
+
+.css {
+  background-color: #1572B6;
+  color: #fff;
+}
+
+.sql {
+  background-color: #336791;
+  color: #fff;
+}
+
+.git {
+  background-color: #F05033;
+  color: #fff;
+}
+
+.github {
+  background-color: #211F1F;
+  color: #fff;
+}
+
+.api {
+  background-color: #A32971;
+  color: #fff;
+}
+
+.redux {
+  background-color: #764ABC;
+  color: #fff;
+}
+
+.component {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.react-native {
+  background-color: #61DAFB;
+  color: #222;
+}
+
+.soft-skill {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.nestjs {
+  background-color: #E0234E;
+  color: #fff;
+}

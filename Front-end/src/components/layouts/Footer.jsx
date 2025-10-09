@@ -16,7 +16,7 @@ export default function Footer() {
             className={styles.text}
             style={{
               fontStyle: "italic",
-              fontSize: "1.15rem",
+              fontSize: "0.9rem",
               color: "#fff",
               margin: "16px 0",
             }}
@@ -24,7 +24,6 @@ export default function Footer() {
             &quot;Este é meu Website e Portfólio oficial. Todos os detalhes dos
             trabalhos desenvolvidos por mim estarão aqui.&quot;
           </p>
-          <br />
           <div className={styles.LinhaCentralizada}></div>
           <br />
           <p className={styles.text}>

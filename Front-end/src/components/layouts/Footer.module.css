@@ -1,6 +1,6 @@
 .section {
   display: flex;
-  min-height: 45vh;
+  min-height: 38vh;
   background: var(--color-primary);
   color: #fff;
   align-items: center;
