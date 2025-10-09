@@ -46,9 +46,10 @@ export default function Contact() {
                             GitHub
                         </a>
                     </div>
-                    <div style={{ width: "100%", textAlign: "center", marginTop: "32px", color: "#fff", fontStyle: "italic", fontSize: "1.08rem" }}>
-                        Obrigado por visitar meu portfólio! Fique à vontade para entrar em contato.
+                    <div style={{ width: "100%", textAlign: "center", marginTop: "32px", color: "#fff", fontStyle: "italic", fontSize: "1.08rem", paddingBottom: "16px" }}>
+                        Obrigado por visitar meu portfólio! Fique à vontade para entrar em contato. 
                     </div>
+                    <div className={styles.LinhaCentralizada} />
                 </div>
             </div>
         </section>

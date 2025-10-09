@@ -1,11 +1,11 @@
 .section {
   display: flex;
-  min-height: 38vh;
+  min-height: 32vh;
   background: var(--color-primary);
   color: #fff;
   align-items: center;
   justify-content: center;
-  position: relative;
+  border-top: rgba(165, 165, 165, 0.464) 2px solid;
 }
 
 .section::before {

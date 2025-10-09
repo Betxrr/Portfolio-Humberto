@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <p
             className={styles.text}
-            style={{ fontWeight: "bold", fontSize: "1.2rem" }}
+            style={{ fontWeight: "bold", fontSize: "1.2rem", textDecoration: "underline" }}
           >
             Humberto da Rosa Rodrigues
           </p>
@@ -21,8 +21,7 @@ export default function Footer() {
               margin: "16px 0",
             }}
           >
-            &quot;Este é meu Website e Portfólio oficial. Todos os detalhes dos
-            trabalhos desenvolvidos por mim estarão aqui.&quot;
+            &quot;Website e Portfólio oficial.&quot;
           </p>
           <div className={styles.LinhaCentralizada}></div>
           <br />

@@ -1,8 +1,9 @@
+/* Mantive apenas os estilos utilizados no Resume.jsx */
+
 :root {
   --spacing-base: 1rem;
   --spacing-small: 0.45rem;
   --spacing-xsmall: 0.25rem;
-
 }
 
 .SkillsBox {
@@ -40,42 +41,12 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-xsmall);
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
   border-radius: 4px;
   padding: 4px 8px;
   font-size: 0.75rem;
   font-weight: bold;
   background-color: var(--color-secondary-background);
-  color: var(--color-text-dark);
-}
-
-.skill-react {
-  background-color: #61DAFB;
-  color: var(--color-text-dark);
-}
-
-.skill-javascript {
-  background-color: #F7DF1E;
-  color: var(--color-text-dark);
-}
-
-.skill-css {
-  background-color: #1572B6;
-  color: var(--color-text-light);
-}
-
-.skill-sql {
-  background-color: #336791;
-  color: var(--color-text-light);
-}
-
-.contactItem {
-  background-color: #444;
-  color: var(--color-text-light);
-}
-
-.contactItem:hover {
-  background-color: #666;
 }
 
 .section {
@@ -114,9 +85,10 @@
   border-top-left-radius: 26px;
   border-bottom-left-radius: 26px;
   font-weight: bold;
-  width: 750px;
+  width: 850px;
   align-items: center;
   z-index: 3;
+  padding-right: 20px;
 }
 
 .HeaderResumeLeft {
@@ -134,7 +106,7 @@
   border-bottom-left-radius: 26px;
   border-top-right-radius: 26px;
   border-bottom-right-radius: 26px;
-  width: 1600px;
+  width: 980px;
   color: #222;
   z-index: 3;
   margin-left: -24px;
@@ -155,8 +127,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 1rem;
-  padding-right: 1.5rem;
+
   margin: 1.25rem;
   gap: var(--spacing-small);
   box-sizing: border-box;
@@ -166,7 +137,7 @@
   width: 12.25rem;
   height: 11.625rem;
   overflow: hidden;
-  border: 2px solid var(--color-text-light);
+  border: 3px solid #cfcfcf;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   border-radius: 50%;
   margin-bottom: var(--spacing-xsmall);
@@ -190,11 +161,12 @@
 }
 
 .ResumeTitle {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #c62828;
-  margin-bottom: 1.125rem;
+  margin-top: 50px;
   text-align: left;
+  padding-left: 18px;
 }
 
 .ResumeText {
@@ -214,7 +186,7 @@
 }
 
 .NomeCentralizado {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   margin-top: 2px;
@@ -225,7 +197,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.85em;
+  font-size: 0.90em;
   color: white;
   margin-bottom: 2px;
 }
@@ -255,18 +227,11 @@
   .ResumeLeft {
     align-items: center;
     padding-top: 0;
-    padding-left: 0;
+    padding-left: 5px;
   }
 
   .ResumeRight {
     padding: 24px 10px;
     margin: 0;
   }
-}
-
-.PhotoWrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
 }

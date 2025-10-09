@@ -1,6 +1,6 @@
 .section {
     display: flex;
-    min-height: 45vh;
+    min-height: 40vh;
     background: #212121af;
     color: white;
     align-items: center;
@@ -10,8 +10,7 @@
 .Limiter {
     width: 100%;
     max-width: 95%;
-    margin: auto;
-    padding: 24px 32px;
+    padding: 24px 5px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -96,4 +95,17 @@
     height: 2px;
     background: linear-gradient(to right, #fff 0%, transparent 100%);
     margin: 12px 0;
+}
+
+.LinhaCentralizada {
+    width: 180px;
+    height: 1px;
+    background: white;
+    border-radius: 2px;
+    border: none;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }

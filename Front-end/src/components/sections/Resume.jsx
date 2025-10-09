@@ -19,7 +19,7 @@ export default function Resume() {
                   <div className={styles.ResumeLeft}>
                      <div className={styles.HeaderResumeLeft}>
                         <div className={styles.ResumePhoto}>
-                           <img alt="Profile" src="/images/Profile-Image.jpg" />
+                           <img alt="Profile" src="/images/Profile-Image.png" />
                         </div>
                         <div className={styles.NomeCentralizado}>
                            Humberto da Rosa Rodrigues
@@ -67,8 +67,6 @@ export default function Resume() {
                               <SkillTag icon={FaMobileAlt} color="react-native">React Native CLI ( Android )</SkillTag>
                               <SkillTag icon={ImCog} color="nestjs">Nest Js</SkillTag>
                               <SkillTag icon={FaDatabase} color="sql">SQL Server</SkillTag>
-                              <SkillTag icon={FaJs} color="javascript">JavaScript</SkillTag>
-                              <SkillTag icon={FaCss3Alt} color="css">CSS</SkillTag>
                               <SkillTag icon={FaGitAlt} color="git">Git</SkillTag>
                               <SkillTag icon={AiFillGithub} color="github">GitHub</SkillTag>
                               <SkillTag icon={SiRedux} color="redux">Redux (básico)</SkillTag>

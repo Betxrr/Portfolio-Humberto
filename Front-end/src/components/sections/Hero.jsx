@@ -18,20 +18,20 @@ export default function Hero() {
             <span style={{ color: "var(--color-primary)" }}>Web </span> |{" "}
             <span style={{ color: "var(--color-primary)" }}>Mobile</span>
           </h3>
-          <p className={style.Descricao}>
-            Da concepção ao código, construo soluções front-end que unem
-            funcionalidade, usabilidade e experiência de usuário
+          <p className={`${style.Frase}`}>
+           " Da concepção ao código, construo soluções front-end que unem
+            funcionalidade, usabilidade e experiência de usuário "
           </p>
           <div className={style.LinhaCentralizada}></div>
+          <p className={`${style.Descricao}`}>
+Este é meu Website e Portfólio oficial. Todos os detalhes dos
+            trabalhos desenvolvidos por mim estarão aqui.
+          </p>
         </div>
         <div className={style.BottomLimiter}>
-          <div className="flex justify-center items-center margin w-full">
-            <button className="w-1/2 px-6 py-2 rounded-lg bg-cyan-600 text-white font-semibold shadow hover:bg-cyan-700 transition">
-              Bt exemplo / Baixar CV
-            </button>
-            <button className="w-1/2 px-6 py-2 rounded-lg bg-cyan-600 text-white font-semibold shadow hover:bg-cyan-700 transition">
-              Bt exemplo / Vamos conversar
-            </button>
+          <div>
+
+
           </div>
         </div>
       </div>

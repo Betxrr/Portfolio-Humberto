@@ -6,7 +6,6 @@
     margin: 0 auto;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     border: 2px solid var(--color-primary);
     display: flex;
     flex-direction: column;
@@ -20,6 +19,7 @@
     height: 3px;
     background: linear-gradient(90deg, var(--color-primary) 60%, #fff 100%);
     margin: 18px auto;
+    margin-top: 55px;
     border-radius: 2px;
     border: none;
     display: block;
@@ -43,12 +43,14 @@
     min-height: 100vh;
     width: 100%;
     border: none;
-    position: relative;
-    z-index: 1;
-    background:
-        linear-gradient(90deg, #ffffff 0%, #fff 35%, transparent 35%),
-        url('/images/Abstract-Image.jpg') no-repeat center center fixed;
-    background-size: cover;
+     position: relative;
+  overflow: hidden; 
+ background-attachment: scroll;
+    color: var(--color-text-dark);
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
 }
 .LeftContainer {
     flex: 1;
@@ -92,13 +94,24 @@
     }
 
     .Descricao {
-        font-size: 1rem;
+        font-size: 0.9rem;
         color: #555;
-        margin-top: 50px;
+        padding-top: 25px;
         font-weight: 500;
         text-align: left;
         line-height: 1.4;
     }
+
+    .Frase {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 20px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.4;
+        font-style: italic;
+    }
+
 
 }
 
@@ -160,7 +173,6 @@
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid white;
-    position: relative;
     margin-bottom: 40px;
     align-self: center;
     width: auto;
