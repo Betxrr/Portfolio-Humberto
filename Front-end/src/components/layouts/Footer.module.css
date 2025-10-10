@@ -6,16 +6,19 @@
   align-items: center;
   justify-content: center;
   border-top: rgba(165, 165, 165, 0.464) 2px solid;
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2); /* sombra projetada para cima */
 }
 
 .section::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
   border-top: 3px solid rgba(69, 69, 69, 0.25);
-  box-shadow: 0 -8px 32px 0 rgba(0, 0, 0, 0.444);
 }
 
 .section > * {
@@ -35,7 +38,7 @@
   text-align: center;
   background: transparent;
   border-radius: 18px;
-  box-shadow: 15px 15px 24px rgba(0,0,0,0.08);
+  box-shadow: none; /* Remove sombra duplicada */
 }
 
 .text {
@@ -57,4 +60,3 @@
 .bold {
   font-weight: bold;
 }
-

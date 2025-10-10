@@ -25,9 +25,7 @@ export default function Resume() {
                            Humberto da Rosa Rodrigues
                         </div>
                      </div>
-
                      <div className={styles.LinhaCentralizada}></div>
-
                      <div className={styles.LocalizacaoTexto}>
                         <FiMapPin className={styles.LocationIcon} />
                         Navegantes, Santa Catarina - Brasil
@@ -57,8 +55,8 @@ export default function Resume() {
                         </a>
                      </div>
 
-                     <div className={styles.LinhaCentralizada}></div>
 
+                     <div className={styles.LinhaCentralizada}></div>
                      <div className={styles.SkillsBox}>
                         <div className={styles.SkillsSection}>
                            <h4 className={styles.SkillsTitle}>Hard Skills:</h4>

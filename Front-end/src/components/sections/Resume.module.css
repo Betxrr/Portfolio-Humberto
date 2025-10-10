@@ -134,8 +134,8 @@
 }
 
 .ResumePhoto {
-  width: 12.25rem;
-  height: 11.625rem;
+  width: 13.25rem;
+  height: 12.625rem;
   overflow: hidden;
   border: 3px solid #cfcfcf;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
@@ -144,6 +144,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ResumePhoto img {
@@ -163,7 +165,7 @@
 .ResumeTitle {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #c62828;
+  color: var(--color-primary);
   margin-top: 50px;
   text-align: left;
   padding-left: 18px;
@@ -176,13 +178,15 @@
 }
 
 .LinhaCentralizada {
-  width: 13.75rem;
-  height: 1.5px;
-  background: linear-gradient(90deg, var(--color-text-light) 60%, transparent 100%);
+  width: 40.75rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.273);
   margin: var(--spacing-small);
   border-radius: 2px;
   border: none;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .NomeCentralizado {
@@ -191,6 +195,7 @@
   text-align: center;
   margin-top: 2px;
   color: white;
+
 }
 
 .LocalizacaoTexto {

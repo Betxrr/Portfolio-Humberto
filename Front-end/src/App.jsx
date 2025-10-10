@@ -5,6 +5,7 @@ import Hero from "./components/sections/Hero.jsx";
 import Works from "./components/sections/Works.jsx";
 import Resume from "./components/sections/Resume.jsx";
 import Contact from "./components/sections/Contact.jsx";
+import FloatingActions from "./components/UI/FloatingActions.jsx"; // Caminho corrigido
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Contact style={{ flex: 1, marginBottom: 0 }} />
           <Footer />
         </div>
+        <FloatingActions /> 
       </main>
     </div>
   );
