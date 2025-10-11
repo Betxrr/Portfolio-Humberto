@@ -3,7 +3,7 @@ import styles from "./Resume.module.css";
 import TextPagination from "../Pagination/ResumeTextPagination.jsx";
 import { FiMapPin } from "react-icons/fi";
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
-import SkillTag from "../Tags/SkillTag.jsx";
+import SkillTag from "../UI/Tags/SkillTag.jsx";
 import { FaReact, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaMobileAlt } from "react-icons/fa";
 import { SiRedux } from 'react-icons/si';
 import { MdApi } from "react-icons/md";

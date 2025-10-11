@@ -10,9 +10,6 @@
   padding: 0;
 }
 
-
-
-
 :root {
   --color-primary: #D14D52;
   --color-primary-light: #fd666b;
@@ -25,22 +22,25 @@
 
 html {
   scroll-behavior: smooth;
-    scroll-padding-top: 80px;
-
-} 
+  scroll-padding-top: 80px;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
-background:
+  background:
     linear-gradient(90deg, #fff 0%, #fff 35%, transparent 70%),
     url('/images/JapaneseGeometricDesign/Abstract-Image.jpg') no-repeat center center fixed;
- 
+  background-position: calc(100% + 50px) center;
   background-size: cover;
-  background-color: var(--color-background);
-  color: var(--color-text-dark);
-  min-height: 100vh; 
-  line-height: 0.8; 
+  min-height: 100vh;
+  line-height: 0.8;
+}
 
+html,
+body {
+  outline: 1px solid red;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .container {
@@ -54,7 +54,12 @@ img {
   height: auto;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
@@ -66,4 +71,3 @@ a {
   text-decoration: none;
   color: var(--color-primary);
 }
-

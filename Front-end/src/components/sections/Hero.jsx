@@ -1,7 +1,11 @@
 import React from "react";
 import style from "./Hero.module.css";
+import LinkBottoms from "../UI/LinkBottoms";
+import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
+  const cvPath = "/Currirulo  Humberto - React Native & React, Front-End.pdf"; // Caminho do CV declarado aqui
+
   return (
     <section className={style.section} id="hero">
       <div className={style.LeftContainer}>
@@ -19,23 +23,20 @@ export default function Hero() {
             <span style={{ color: "var(--color-primary)" }}>Mobile</span>
           </h3>
           <p className={`${style.Frase}`}>
-           " Da concepção ao código, construo soluções front-end que unem
+            " Da concepção ao código, construo soluções front-end que unem
             funcionalidade, usabilidade e experiência de usuário "
           </p>
           <div className={style.LinhaCentralizada}></div>
-          <p className={`${style.Descricao}`}>
-Este é meu Website e Portfólio oficial. Todos os detalhes dos
-            trabalhos desenvolvidos por mim estarão aqui.
-          </p>
-        </div>
-        <div className={style.BottomLimiter}>
-          <div>
-
-
+          <div className={style.BottomLimiter}>
+            <LinkBottoms href={cvPath} download Icon={FaDownload} bottomStyle={1}>
+              Baixar CV
+            </LinkBottoms>
+            <LinkBottoms href="mailto:humbertorodrigues473@gmail.com">
+              Vamos conversar!
+            </LinkBottoms>
           </div>
         </div>
       </div>
-
       <div className={style.RightContainer}>
         <div className={style.ImageContainer}></div>
       </div>

@@ -1,0 +1,129 @@
+.ProjectCard {
+    flex: 1 1 calc(33.33% - 32px); 
+    max-width: calc(33.33% - 32px); 
+    height: 600px; 
+    background: #181818;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #333;
+}
+
+.ProjectImage {
+    width: 95%;
+    height: 240px;
+    background: #232323;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.ImageButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5); 
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    opacity: 0.3; 
+}
+
+.ImageButton:hover {
+    background: rgba(0, 0, 0, 0.8); 
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.ImageButtonLeft {
+    left: 10px; 
+}
+
+.ImageButtonRight {
+    right: 10px;
+}
+
+.ProjectImage:hover .ImageButton {
+    opacity: 1;
+}
+
+.ProjectInfo {
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #232323;
+}
+
+.ProjectName {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--color-primary-light);
+    letter-spacing: 1px;
+}
+
+.ProjectDescription {
+    font-size: 0.875rem;
+    color: #bdbdbd;
+    margin-bottom: 12px;
+}
+
+.ProjectLink {
+    color: var(--color-primary-light);
+    background: transparent;
+    border: 1px solid var(--color-primary-light);;
+    border-radius: 6px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: background 0.2s, color 0.2s;
+    margin: auto;
+}
+
+.ProjectLink:hover {
+    background: var(--color-primary-light);
+    color: #fff;
+}
+
+.TagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.LinhaCentralizada {
+  width: 20rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.178);
+  margin:20px ;
+  border-radius: 2px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ProjectLinkSection {
+    margin-top: 16px;
+    text-align: center;
+    padding-bottom: 8px;
+}
+

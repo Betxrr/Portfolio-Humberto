@@ -21,17 +21,17 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
 
 ### Fase 2: Desenvolvimento do Layout e Animações
 -   [ X ]**Header e Footer:** Criar componentes de navegação e rodapé reutilizáveis.
--   [  ]**Página Home:** Desenvolver a seção principal com uma apresentação pessoal e animações de entrada.
+-   [ X ]**Página Home:** Desenvolver a seção principal com uma apresentação pessoal e animações de entrada.
 -   [  ]**Animações e Efeitos Visuais:**
     -   Implementar animações de rolagem para que elementos apareçam gradualmente.
     -   Criar efeitos dinâmicos, como o header que muda ao rolar a página.
     -   Adicionar micro-interações, como ícones flutuantes.
 -   [ X ]**Seção Sobre Mim:** Criar uma seção para descrever minha trajetória e filosofia de trabalho.
--   [  ]**Seção de Projetos:** Desenvolver uma área para exibir os projetos futuros com um design atraente.
+-   [ X ]**Seção de Projetos:** Desenvolver uma área para exibir os projetos futuros com um design atraente.
 -   [ X ]**Seção de Habilidades:** Listar as tecnologias que eu domino.
 
 ### Fase 3: Conteúdo e Refinamento
--   [  ]Adicionar todo o conteúdo textual e visual do portfólio.
+-   [ X ]Adicionar todo o conteúdo textual e visual do portfólio.
 -   [  ]Garantir que o portfólio seja totalmente responsivo em diferentes dispositivos.
 
 ### Fase 4: Deploy

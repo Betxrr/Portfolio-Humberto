@@ -1,99 +1,46 @@
 .section {
     display: flex;
-    min-height: 90vh;
+    min-height: 95vh;
     background: #212121af;
     color: white;
-    align-items: center;
-    justify-content: center;
+    scroll-margin-top: -20px; 
+    padding-top: 20px;
 }
 
 .Limiter {
     width: 100%;
-    max-width: 95%;
-    margin: auto;
+    max-width: 94%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 24px 32px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-}
-
-.ContainerBox {
-  width: 95%;
-  margin: auto;
-  background: #fff;
-  border-radius: 28px;
-  padding: 32px 24px;
-  z-index: 2;
-  height: 650px;
-  border: gray solid 2px ;  
 }
 
 .ProjectsGrid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
+    flex-wrap: wrap; 
+    gap: 32px; 
     width: 100%;
     margin-top: 24px;
+    justify-content: space-between; 
 }
 
 .ProjectCard {
-    flex: 1 1 28%;
-    min-width: 320px;
-    max-width: 33%;
+    flex: 1 1 calc(33.33% - 32px); 
+    max-width: calc(33.33% - 32px);
     background: #181818;
     border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     border: 1px solid #333;
 }
 
-.ProjectImage {
-    width: 100%;
-    height: 140px;
-    background: #232323;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ProjectInfo {
-    padding: 18px 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: #232323;
-}
-
-.ProjectName {
-    font-size: 1.15rem;
+.WorksTitle {
+    color: var(--color-primary-light);
     font-weight: bold;
-    margin-bottom: 6px;
-    color: #c62828;
-    letter-spacing: 1px;
+    font-size: 2rem;
 }
 
-.ProjectDescription {
-    font-size: 1rem;
-    color: #bdbdbd;
-    margin-bottom: 12px;
-}
-
-.ProjectLink {
-    color: #c62828;
-    background: transparent;
-    border: 1px solid #c62828;
-    padding: 6px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    align-self: flex-start;
-    transition: background 0.2s, color 0.2s;
-}
-
-.ProjectLink:hover {
-    background: #c62828;
-    color: #fff;
-}

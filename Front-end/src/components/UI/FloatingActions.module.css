@@ -1,7 +1,7 @@
 .FloatingActions {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -14,8 +14,8 @@
   border-radius: 25%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  height: 46px;
+  width: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,18 +24,34 @@
 
 .ActionButton:hover {
   background: rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 
 .ActionButtonWhatsapp {
-  background: none; 
-  border: none; 
-  box-shadow: none; 
+  background: #25d366; 
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  height: auto;
-  width: auto;
+  height: 46px; 
+  width: 46px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  color: white; 
+  font-size: 24px; 
+  margin-bottom: 35px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  transition: transform 0.3s ease
+}
+
+.ActionButtonWhatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.ActionButtonWhatsapp:active {
+  transform: scale(0.95); 
 }
