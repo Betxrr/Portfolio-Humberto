@@ -27,13 +27,15 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background:
-    linear-gradient(90deg, #fff 0%, #fff 35%, transparent 70%),
-    url('/images/JapaneseGeometricDesign/Abstract-Image.jpg') no-repeat center center fixed;
-  background-position: calc(100% + 50px) center;
-  background-size: cover;
   min-height: 100vh;
   line-height: 0.8;
+  background-image: 
+    linear-gradient(to right, #fff 0%, #fff 45%, transparent 70%), 
+    url('/images/JapaneseGeometricDesign/Abstract-Image.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, calc(100% + 50px) center;
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
 }
 
 html,

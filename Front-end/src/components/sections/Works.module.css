@@ -1,3 +1,25 @@
+
+/* Responsive adjustments for different screen sizes */
+
+@media (max-width: 1200px) {
+  .ProjectsGrid {
+    justify-content: center; 
+  }
+  .ProjectCard {
+    flex-basis: calc(50% - 32px);
+    max-width: calc(50% - 32px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ProjectCard {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Estilos da Works */
+
 .section {
     display: flex;
     min-height: 95vh;
@@ -5,6 +27,8 @@
     color: white;
     scroll-margin-top: -20px; 
     padding-top: 20px;
+      scroll-margin-top: -68px;
+
 }
 
 .Limiter {
@@ -43,4 +67,3 @@
     font-weight: bold;
     font-size: 2rem;
 }
-

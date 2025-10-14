@@ -23,10 +23,11 @@
 }
 
 .SkillsTitle {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  color: var(--color-text-light);
+  color: var(--color-primary-light);
   margin-bottom: var(--spacing-small);
+  letter-spacing: 1px;
 }
 
 .SkillsList {
@@ -61,12 +62,9 @@
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   box-shadow: 0 -25px 32px 0 rgba(0, 0, 0, 0.18);
-  scroll-margin-top: -55px;
   padding: 32px 0;
   padding-top: 65px;
   scroll-margin-top: -80px;
-  
-
 }
 
 .ContainerBox {
@@ -76,22 +74,24 @@
   border-radius: 28px;
   box-shadow: 15px 8px 32px 0 rgba(0, 0, 0, 0.411);
   z-index: 2;
-  height: 700px;
+  min-height: 700px;
   border: gray solid 2px;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .PrimaryColorBackground {
-  background: var(--color-primary);
+  background:#2e2e2e;
   color: var(--color-text-light);
+  font-weight: bold;
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top-left-radius: 26px;
   border-bottom-left-radius: 26px;
-  font-weight: bold;
-  width: 950px;
-  align-items: center;
-  z-index: 3;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .HeaderResumeLeft {
@@ -104,29 +104,18 @@
 
 .WhiteBackground {
   background: white;
-  border-left: rgba(128, 128, 128, 0.396) solid 2px;
-  border-top-left-radius: 26px;
-  border-bottom-left-radius: 26px;
-  border-top-right-radius: 26px;
-  border-bottom-right-radius: 26px;
-  width: 1200px;
   color: #222;
   z-index: 3;
-  margin-left: -24px;
+  flex: 1 1 60%;
+  border-left: rgba(128, 128, 128, 0.396) solid 2px;
   box-shadow: -12px 0 24px -8px rgba(0, 0, 0, 0.18);
-}
-
-.ResumeFlex {
-  display: flex;
-  gap: var(--spacing-base);
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
+  border-top-right-radius: 26px;
+  border-bottom-right-radius: 26px;
 }
 
 .ResumeLeft {
-  flex: 1; 
-  max-width: 650px; /* Limita a largura máxima */
+  max-width: 650px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -163,6 +152,7 @@
   align-items: stretch;
   justify-content: flex-start;
   margin: 1.25rem;
+  flex: 1; 
 }
 
 .ResumeTitle {
@@ -178,41 +168,47 @@
   font-size: 0.9em;
   color: var(--color-text-dark);
   line-height: 1.7;
+
+  flex: 1; 
+  display: flex; /* Permite que o filho (.paginationContainer) use height: 100% */
 }
 
 .LinhaCentralizada {
-  width: 40.75rem;
+  width: 20.75rem;
   height: 2px;
-  background: rgba(255, 255, 255, 0.273);
+  background: rgba(255, 255, 255, 0.178);
   margin: var(--spacing-small);
   border-radius: 2px;
   border: none;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .NomeCentralizado {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   text-align: center;
   margin-top: 2px;
-  color: white;
-
+  color: var(--color-primary-light);
 }
 
 .LocalizacaoTexto {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 0.90em;
+  gap: 8px; 
+ 
+  font-size: 0.95rem; 
+  font-weight: 400; 
   color: white;
-  margin-bottom: 2px;
+  margin-bottom: 8px; 
 }
 
 .LocalizacaoTexto a {
   color: #fff !important;
-  font-weight: bold;
+  font-weight: 400; 
   text-decoration: none;
 }
 
@@ -224,6 +220,37 @@
 .LocationIcon {
   color: #ffffff;
   font-size: 1.2em;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 1200px) {
+  .ContainerBox {
+    flex-direction: column;
+  }
+
+  .PrimaryColorBackground,
+  .WhiteBackground {
+    flex-basis: auto;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .WhiteBackground {
+    margin-left: 0;
+    border-left: none;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+  }
+
+  .PrimaryColorBackground {
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    border-bottom-left-radius: 0;
+  }
 }
 
 @media (max-width: 900px) {

@@ -32,7 +32,8 @@ export default function TextPagination() {
         profissionais já consolidados na área que são próximos a mim, e tentando
         cada vez mais mostrar que eu possuo sim uma visão profissional
         atualizada, prática e técnica sobre a minha área de estudo, buscando
-        sempre ser um profissional melhor a cada dia e valorizar cada vez mais a minha mão de obra.
+        sempre ser um profissional melhor a cada dia e valorizar cada vez mais a
+        minha mão de obra.
       </p>
     </div>,
 
@@ -63,43 +64,44 @@ export default function TextPagination() {
   const PrevButtonClasses = Page === 0 ? style.Disabled : "";
   const NextButtonClasses = Page === totalPages - 1 ? style.Disabled : "";
 
+
   return (
-    <>
+    <div className={style.paginationContainer}>
       <div className={style.TextContainer}>
         <div className={style.TextArea}>{PageText[Page]}</div>
       </div>
 
-      {/* divisor superior dos controles */}
-      <div className={style.Divider} />
+      {/* Agrupamos os controles em um div para garantir que fiquem juntos */}
+      <div className={style.controlsContainer}>
+        <div className={style.Divider} />
+        <div className={style.BottomNav}>
+          <button
+            className={`${style.NavButton} ${PrevButtonClasses}`}
+            onClick={() => SetPage(Page > 0 ? Page - 1 : 0)}
+            disabled={Page === 0}
+            aria-label="Página anterior"
+            title="Página anterior"
+          >
+            <FaChevronLeft size={18} /> Voltar
+          </button>
 
-      {/* controles inferiores */}
-      <div className={style.BottomNav}>
-        <button
-          className={`${style.NavButton} ${PrevButtonClasses}`}
-          onClick={() => SetPage(Page > 0 ? Page - 1 : 0)}
-          disabled={Page === 0}
-          aria-label="Página anterior"
-          title="Página anterior"
-        >
-          <FaChevronLeft size={18} /> Voltar
-        </button>
+          <span className={style.PageInfo}>
+            Página {Page + 1} de {PageText.length}
+          </span>
 
-        <span className={style.PageInfo}>
-          Página {Page + 1} de {PageText.length}
-        </span>
-
-        <button
-          className={`${style.NavButton} ${NextButtonClasses}`}
-          onClick={() =>
-            SetPage(Page < PageText.length - 1 ? Page + 1 : PageText.length - 1)
-          }
-          disabled={Page === PageText.length - 1}
-          aria-label="Próxima página"
-          title="Avançar"
-        >
-          Avançar <FaChevronRight size={18} />
-        </button>
+          <button
+            className={`${style.NavButton} ${NextButtonClasses}`}
+            onClick={() =>
+              SetPage(Page < totalPages - 1 ? Page + 1 : totalPages - 1)
+            }
+            disabled={Page === totalPages - 1}
+            aria-label="Próxima página"
+            title="Avançar"
+          >
+            Avançar <FaChevronRight size={18} />
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

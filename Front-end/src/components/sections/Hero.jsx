@@ -4,7 +4,7 @@ import LinkBottoms from "../UI/LinkBottoms";
 import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
-  const cvPath = "/Currirulo  Humberto - React Native & React, Front-End.pdf"; // Caminho do CV declarado aqui
+  const cvPath = "/curriculo-humberto.pdf"; 
 
   return (
     <section className={style.section} id="hero">
@@ -27,10 +27,14 @@ export default function Hero() {
             funcionalidade, usabilidade e experiência de usuário "
           </p>
           <div className={style.LinhaCentralizada}></div>
+          <p className={style.DescricaoBemVindo}>
+            Bem-vindo ao meu website e portfólio oficial!
+          </p>
           <div className={style.BottomLimiter}>
             <LinkBottoms href={cvPath} download Icon={FaDownload} bottomStyle={1}>
               Baixar CV
             </LinkBottoms>
+            
             <LinkBottoms href="mailto:humbertorodrigues473@gmail.com">
               Vamos conversar!
             </LinkBottoms>

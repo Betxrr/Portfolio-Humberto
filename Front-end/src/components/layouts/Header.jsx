@@ -13,7 +13,7 @@ export default function Header() {
                     <li><a href="#hero"><FaHome /> Home</a></li>
                     <li><a href="#resume"><IoDocumentText />Sobre Mim</a></li>
                     <li><a href="#works"><FaBriefcase /> Projetos </a></li>
-                    <li><a href="#contact"><FaEnvelope /> Contato</a></li>
+                    <li><a href="#contact"><FaEnvelope /> Contatos</a></li>
                 </ul>
             </nav>
         </div>
