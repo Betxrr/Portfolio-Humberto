@@ -32,7 +32,7 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
 
 ### Fase 3: Conteúdo e Refinamento
 -   [ X ]Adicionar todo o conteúdo textual e visual do portfólio.
--   [  ]Garantir que o portfólio seja totalmente responsivo em diferentes dispositivos.
+-   [ X ]Garantir que o portfólio seja totalmente responsivo em diferentes dispositivos.
 
 ### Fase 4: Deploy
 -   [  ]Preparar a aplicação para produção.
