@@ -69,13 +69,11 @@
   animation-delay: 0.5s;
 }
 
-/* Animação em cascata para os elementos seguintes */
 .Cargo, .Tags, .Frase, .LinhaCentralizada, .DescricaoBemVindo, .BottomLimiter {
   opacity: 0;
   animation: slideUpAndFadeIn 0.7s ease-out forwards;
 }
 
-/* Atrasos ajustados para começar após a digitação */
 .Cargo { animation-delay: 3.8s; }
 .Tags { animation-delay: 4.0s; }
 .Frase { animation-delay: 4.2s; }
@@ -84,9 +82,7 @@
 .BottomLimiter { animation-delay: 4.8s; }
 
 
-/* ================================================= */
-/* O RESTO DO SEU ARQUIVO .css (sem alterações)      */
-/* ================================================= */
+/* O RESTO DO ARQUIVO .css */
 
 .LinhaCentralizada {
     width: 320px;
@@ -101,7 +97,6 @@
 
 .TopperLimiter {
     width: 100%;
-    /* A largura máxima aqui já controla o container esquerdo */
     max-width: 800px; 
     margin-left: auto;
     margin-right: auto;

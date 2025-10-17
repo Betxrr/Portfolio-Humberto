@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styles from "./Resume.module.css";
 import TextPagination from "../Pagination/ResumeTextPagination.jsx";
@@ -6,12 +7,9 @@ import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import SkillTag from "../UI/Tags/SkillTag.jsx";
 import {
   FaReact,
-  FaJs,
-  FaCss3Alt,
+  FaMobileAlt,
   FaDatabase,
   FaGitAlt,
-  FaGithub,
-  FaMobileAlt,
 } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
 import { MdApi } from "react-icons/md";
@@ -20,7 +18,14 @@ import { ImCog } from "react-icons/im";
 export default function Resume() {
   return (
     <section className={styles.section} id="resume">
-      <div className={styles.ContainerBox}>
+      {/* A animação foi movida da <section> para a <div className={styles.ContainerBox}> */}
+      <motion.div 
+        className={styles.ContainerBox}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <div className={styles.PrimaryColorBackground}>
           <div className={styles.ResumeFlex}>
             <div className={styles.ResumeLeft}>
@@ -61,7 +66,6 @@ export default function Resume() {
                   github.com/Betxrr
                 </a>
               </div>
-
               <div className={styles.LinhaCentralizada}></div>
               <div className={styles.SkillsBox}>
                 <div className={styles.SkillsSection}>
@@ -108,7 +112,7 @@ export default function Resume() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

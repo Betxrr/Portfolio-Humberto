@@ -1,3 +1,6 @@
+// 1. Importe o 'motion' da biblioteca
+import { motion } from "framer-motion";
+
 import React from "react";
 import { FiMail, FiPhone, FiMessageCircle } from "react-icons/fi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -6,7 +9,16 @@ import styles from './Contact.module.css';
 export default function Contact() {
     return (
         <section className={styles.section} id="contact">
-            <div className={styles.Limiter}>
+            {/* 2. Transforme a <div className={styles.Limiter}> em um componente de animação */}
+            <motion.div 
+                className={styles.Limiter}
+                
+                // 3. Adicione as propriedades da Framer Motion
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+            >
                 <h2 className={styles.ContactTitle}>Contatos:</h2>
                 <br />
                 <div className={styles.ContactList}>
@@ -30,7 +42,6 @@ export default function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.ContactLinkdin}
-                       
                         >
                             <FaLinkedin size={28} color="#1976d2" />
                             LinkedIn
@@ -40,7 +51,6 @@ export default function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.ContactLinkGithub}
-
                         >
                             <FaGithub size={28} color="#222" />
                             GitHub
@@ -51,7 +61,7 @@ export default function Contact() {
                     </div>
                     <div className={styles.LinhaCentralizada} />
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }
