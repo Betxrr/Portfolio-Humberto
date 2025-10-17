@@ -32,6 +32,7 @@ export default function Works() {
               { name: "CSS", color: "css" },
             ]}
           />
+         
         </div>
       </motion.div>
     </section>

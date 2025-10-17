@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import style from "./ResumeTextPagination.module.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -32,11 +33,9 @@ export default function TextPagination() {
         profissionais já consolidados na área que são próximos a mim, e tentando
         cada vez mais mostrar que eu possuo sim uma visão profissional
         atualizada, prática e técnica sobre a minha área de estudo, buscando
-        sempre ser um profissional melhor a cada dia e valorizar cada vez mais a
-        minha mão de obra.
+        sempre ser um profissional melhor a cada dia e valorizar cada vez mais a minha mão de obra.
       </p>
     </div>,
-
     <div key="page-2">
       <h4 className={`${style.title}`}>
         <em>Seção Bônus: "Uma visão pessoal sobre mim mesmo"</em>
@@ -61,42 +60,40 @@ export default function TextPagination() {
   const [Page, SetPage] = useState(0);
   const totalPages = PageText.length;
 
-  const PrevButtonClasses = Page === 0 ? style.Disabled : "";
-  const NextButtonClasses = Page === totalPages - 1 ? style.Disabled : "";
-
-
   return (
     <div className={style.paginationContainer}>
       <div className={style.TextContainer}>
-        <div className={style.TextArea}>{PageText[Page]}</div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={Page} // A 'key' ainda é crucial para detectar a mudança
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.150 }}
+            className={style.TextArea} // A classe de layout é aplicada aqui
+          >
+            {PageText[Page]}
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Agrupamos os controles em um div para garantir que fiquem juntos */}
       <div className={style.controlsContainer}>
         <div className={style.Divider} />
         <div className={style.BottomNav}>
           <button
-            className={`${style.NavButton} ${PrevButtonClasses}`}
+            className={`${style.NavButton}`}
             onClick={() => SetPage(Page > 0 ? Page - 1 : 0)}
             disabled={Page === 0}
-            aria-label="Página anterior"
-            title="Página anterior"
           >
             <FaChevronLeft size={18} /> Voltar
           </button>
-
           <span className={style.PageInfo}>
-            Página {Page + 1} de {PageText.length}
+            Página {Page + 1} de {totalPages}
           </span>
-
           <button
-            className={`${style.NavButton} ${NextButtonClasses}`}
-            onClick={() =>
-              SetPage(Page < totalPages - 1 ? Page + 1 : totalPages - 1)
-            }
+            className={`${style.NavButton}`}
+            onClick={() => SetPage(Page < totalPages - 1 ? Page + 1 : totalPages - 1)}
             disabled={Page === totalPages - 1}
-            aria-label="Próxima página"
-            title="Avançar"
           >
             Avançar <FaChevronRight size={18} />
           </button>
