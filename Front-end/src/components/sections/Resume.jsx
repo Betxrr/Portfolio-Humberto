@@ -5,12 +5,7 @@ import TextPagination from "../Pagination/ResumeTextPagination.jsx";
 import { FiMapPin } from "react-icons/fi";
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import SkillTag from "../UI/Tags/SkillTag.jsx";
-import {
-  FaReact,
-  FaMobileAlt,
-  FaDatabase,
-  FaGitAlt,
-} from "react-icons/fa";
+import { FaReact, FaMobileAlt, FaDatabase, FaGitAlt } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
 import { MdApi } from "react-icons/md";
 import { ImCog } from "react-icons/im";
@@ -19,7 +14,7 @@ export default function Resume() {
   return (
     <section className={styles.section} id="resume">
       {/* A animação foi movida da <section> para a <div className={styles.ContainerBox}> */}
-      <motion.div 
+      <motion.div
         className={styles.ContainerBox}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -102,13 +97,11 @@ export default function Resume() {
           </div>
         </div>
         <div className={styles.WhiteBackground}>
-          <div>
-            <div className={styles.ResumeRight}>
-              <h3 className={styles.ResumeTitle}>Sobre Mim:</h3>
-              <br />
-              <div className={styles.ResumeText}>
-                <TextPagination />
-              </div>
+          <div className={styles.ResumeRight}>
+            <h3 className={styles.ResumeTitle}>Sobre Mim:</h3>
+            <br />
+            <div className={styles.ResumeText}>
+              <TextPagination />
             </div>
           </div>
         </div>

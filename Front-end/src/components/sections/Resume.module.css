@@ -155,6 +155,8 @@
   flex: 1; 
 }
 
+
+
 .ResumeTitle {
   font-size: 1.8rem;
   font-weight: bold;
@@ -236,15 +238,18 @@
     border-radius: 0;
   }
 
-  .WhiteBackground {
-    margin-left: 0;
-    border-left: none;
-    box-shadow: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 26px;
-    border-bottom-right-radius: 26px;
-  }
+.WhiteBackground {
+  background: white;
+  color: #222;
+  z-index: 3;
+  flex: 1 1 60%;
+  border-left: rgba(128, 128, 128, 0.396) solid 2px;
+  box-shadow: -12px 0 24px -8px rgba(0, 0, 0, 0.18);
+  border-top-right-radius: 26px;
+  border-bottom-right-radius: 26px;
+  display: flex; /* Adicionado */
+  flex-direction: column; /* Adicionado */
+}
 
   .PrimaryColorBackground {
     border-top-left-radius: 26px;

@@ -54,6 +54,9 @@ export default function TextPagination() {
         interesse genuíno em pensar na forma como as pessoas irão interagir com
         uma criação minha. Me colocando no lugar do usuário.
       </p>
+      <p className={style.espacamento}>
+        <br />
+      </p>
     </div>,
   ];
 
