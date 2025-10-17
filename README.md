@@ -34,8 +34,8 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
 -   [ X ]Garantir que o portfólio seja totalmente responsivo em diferentes dispositivos.
 
 ### Fase 4: Deploy
--   [  ]Preparar a aplicação para produção.
--   [  ]Publicar o portfólio no GitHub Pages (`github.io`).
+-   [ X ]Preparar a aplicação para produção.
+-   [ X ]Publicar o portfólio no GitHub Pages (`github.io`).
 
 
 ## 🛠️ Como Rodar o Projeto Localmente
