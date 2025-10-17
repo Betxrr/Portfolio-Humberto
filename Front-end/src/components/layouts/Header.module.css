@@ -1,75 +1,128 @@
+/* Animações de entrada para o conteúdo do Header */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .header {
     display: flex;
     align-items: center; 
-    
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    
+    background-color: rgb(64, 64, 64);
+    border-bottom: 2px solid rgba(165, 165, 165, 0.357);
+    padding: 0.2rem 0;
 
-    padding: 0.5rem 1rem; 
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
     width: 100%;
+    padding: 0 25px;
+    justify-content: space-between;
+    transition: transform 0.4s ease; 
+}
+
+.header.scrolled {
+    background-color: var(--color-primary); 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    background-color: var(--color-background-dark);
+    padding: 0.2rem;
+    border-color: transparent; 
+    border-bottom: 2px solid rgba(165, 165, 165, 0.357);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
+}
+
+.header.scrolled .headerContent {
+    transform: translateY(3px);
+    padding-bottom: 5px;
 }
 
 .header h1 {
     color: var(--color-text-light);
     font-weight: 700;
     display: inline-block;
+    font-size: 1.5rem;
+    animation: slideInFromLeft 0.8s ease-out forwards;
 }
 
 .header h1 span {
-    color: var(--color-primary);
+    color: var(--color-primary-light);
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.6rem;
     display: inline;
 }
 
-.emailContainer {
+.header.scrolled h1 span {
     color: var(--color-text-light);
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding-left: 9.5rem;
-    flex: 2; 
+    font-weight: bold;
+    font-size: 0.6rem;
+    display: inline;
+    padding: 0.5rem 0;
 }
 
 .header nav {
-    margin-left: auto; 
+    opacity: 0; 
+    animation: slideInFromRight 0.8s ease-out forwards;
+    animation-fill-mode: forwards;
 }
 
-    nav ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        font-size: 0.875rem;
-        color: var(--color-secondary);
-    }
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.750rem;
+}
 
-    nav ul li a {
-        color: var(--color-text-light); 
-        font-weight: 400;
-        padding: 0.5rem 1rem;
-        border-radius: 8px; 
-        transition: all 0.3s ease;  
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+nav ul li a {
+    color: var(--color-text-light); 
+    font-weight: 400;
+    padding: 0.5rem 0.5rem;
+    border-radius: 8px; 
+    transition: all 0.3s ease;  
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
-    nav ul li a:hover {
-        color: var(--color-text-light); 
-        background-color: var(--color-primary);
-        transform: translateY(-2px);
-    }
+nav ul li a:hover {
+    color: var(--color-text-light); 
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
 
-    nav ul li a.active {
+.header.scrolled nav ul li a:hover {
+    color: var(--color-primary); 
+    background-color: var(--color-text-light);
+}
+
+nav ul li a.active {
     color: var(--color-primary);
     font-weight: 600;
 }

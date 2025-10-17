@@ -9,8 +9,7 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
 -   **React:** Biblioteca JavaScript para a construção da interface do usuário.
 -   **Vite:** Ferramenta de build rápida e otimizada para o desenvolvimento.
 -   **React Router:** Biblioteca para o gerenciamento da navegação entre as páginas.
--   **Framer Motion:** Biblioteca de animação para React, ideal para criar efeitos de rolagem, transições e interações dinâmicas.
--   **Tailwind CSS e CSS Tradicional:** Para uma abordagem híbrida de estilização, combinando a velocidade do Tailwind com a flexibilidade do CSS.
+-   **Tailwind CSS e CSS Module:** Para uma abordagem híbrida de estilização, combinando a velocidade do Tailwind com a flexibilidade do CSS.
 
 ## 🚀 Planejamento (Roadmap)
 
@@ -32,7 +31,7 @@ Desenvolver um portfólio pessoal e moderno para apresentar meus projetos e habi
 
 ### Fase 3: Conteúdo e Refinamento
 -   [ X ]Adicionar todo o conteúdo textual e visual do portfólio.
--   [  ]Garantir que o portfólio seja totalmente responsivo em diferentes dispositivos.
+-   [ X ]Garantir que o portfólio seja totalmente responsivo em diferentes dispositivos.
 
 ### Fase 4: Deploy
 -   [  ]Preparar a aplicação para produção.

@@ -22,7 +22,12 @@ export default function ProjectInfo({ title, description, technologies, projectU
 
       <div className={styles.ProjectLinkSection}>
         <div className={styles.LinhaCentralizada} />
-        <a href={projectUrl} className={styles.ProjectLink}>
+                <a
+          href={projectUrl}
+          className={styles.ProjectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithub style={{ marginRight: '8px' }} size={18} />
           <span>Ver Projeto</span>
         </a>

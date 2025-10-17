@@ -1,18 +1,92 @@
-/* Limiter: quadrado centralizado que ocupa o tamanho exato da section */
-.Limiter {
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 18px;
-    border: 2px solid var(--color-primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: stretch;
-    overflow: hidden;
+/* DEFINIÇÃO DAS ANIMAÇÕES (@keyframes)              */
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
+
+@keyframes blink-caret-infinite {
+  from, to { border-color: transparent; }
+  50% { border-color: black; } 
+}
+
+@keyframes slideUpAndFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+
+.LeftContainer {
+  flex: 1;
+  max-width: 680px; 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.CaixaDeDialogo {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+}
+
+.NomePrincipal {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  text-align: left;
+  padding-bottom: 0.1em;
+  white-space: nowrap; 
+
+  display: flex;          
+  align-items: baseline;
+}
+
+
+.typingEffect {
+  display: inline-block;
+  overflow: hidden; 
+  white-space: nowrap; 
+  border-right: 4px solid black; 
+  width: 0;
+  box-sizing: border-box;
+  padding-bottom: 0.2em; 
+  padding-top: 0.2em;   
+
+  vertical-align: bottom; 
+
+  animation: 
+    typing 3s steps(25, end) forwards,
+    blink-caret-infinite 0.75s step-end infinite;
+  animation-delay: 0.5s;
+}
+
+/* Animação em cascata para os elementos seguintes */
+.Cargo, .Tags, .Frase, .LinhaCentralizada, .DescricaoBemVindo, .BottomLimiter {
+  opacity: 0;
+  animation: slideUpAndFadeIn 0.7s ease-out forwards;
+}
+
+/* Atrasos ajustados para começar após a digitação */
+.Cargo { animation-delay: 3.8s; }
+.Tags { animation-delay: 4.0s; }
+.Frase { animation-delay: 4.2s; }
+.LinhaCentralizada { animation-delay: 4.4s; }
+.DescricaoBemVindo { animation-delay: 4.6s; }
+.BottomLimiter { animation-delay: 4.8s; }
+
+
+/* ================================================= */
+/* O RESTO DO SEU ARQUIVO .css (sem alterações)      */
+/* ================================================= */
 
 .LinhaCentralizada {
     width: 320px;
@@ -27,7 +101,8 @@
 
 .TopperLimiter {
     width: 100%;
-    max-width: 600px;
+    /* A largura máxima aqui já controla o container esquerdo */
+    max-width: 800px; 
     margin-left: auto;
     margin-right: auto;
     padding: 24px 32px;
@@ -38,123 +113,19 @@
 }
 
 .section {
-
     display: flex;
     min-height: 100vh;
     width: 100%;
     border: none;
-     position: relative;
-  overflow: hidden; 
- background-attachment: scroll;
+    position: relative;
+    overflow: hidden; 
+    background-attachment: scroll;
     color: var(--color-text-dark);
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 40px 80px;
     box-sizing: border-box;
 }
-.LeftContainer {
-    flex: 1;
-    margin-right: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-
-
-    .NomePrincipal {
-        font-size: 3.3rem;
-        font-weight: bold;
-        color: #222;
-        margin: 0;
-        text-align: left;
-    }
-
-    .NomeSecundario {
-        font-size: 3.3rem;
-        font-weight: bold;
-        color: #222;
-        margin: 0;
-        text-align: right;
-    }
-
-    .Cargo {
-        font-size: 1.5rem;
-        color: #555;
-        margin-top: 30px;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .Tags {
-        font-size: 1.2rem;
-        color: #555;
-        margin-top: 7px;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .Descricao {
-        font-size: 0.9rem;
-        color: #555;
-        padding-top: 25px;
-        font-weight: 500;
-        text-align: left;
-        line-height: 1.4;
-    }
-
-    
-    .DescricaoBemVindo {
-        font-size: 1rem;
-        color: #555;
-        padding-top: 15px;
-        font-weight: 500;
-        text-align: center;
-        line-height: 1.4;
-
-    }
-
-    .Frase {
-        font-size: 0.9rem;
-        color: #555;
-        margin-top: 20px;
-        font-weight: 500;
-        text-align: center;
-        line-height: 1.4;
-        font-style: italic;
-    }
-
-
-}
-
-.TopperLimiter {
-    width: 100%;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 24px 32px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.Divider {
-    width: 2px;
-    background-color: #ccc;
-    margin: 0 10px;
-}
-
-
-.BottomLimiter {
-    width: 100%;
-    max-width: 600px;
-
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .RightContainer {
     flex: 1;
@@ -164,23 +135,11 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-  
 }
-
-.section div h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    line-height: 1;
-}
-
-
 
 .CaixaDeDialogo {
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: white;   
     padding: 20px 20px;
     border-radius: 10px;
     font-size: 1rem;
@@ -191,6 +150,7 @@
     width: auto;
     min-width: unset;
     max-width: 80%;
+    position: relative;
 }
 
 .TrianguloDialogo {
@@ -206,22 +166,48 @@
     z-index: 1;
 }
 
-.CaixaDeDialogo {
-    position: relative;
+.Cargo {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.Tags {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 7px;
+    font-weight: 600;
+    text-align: center;
+}
+    
+.DescricaoBemVindo {
+    font-size: 1rem;
+    color: #555;
+    padding-top: 15px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.Frase {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 20px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    font-style: italic;
 }
 
 .BottomLimiter {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
-    text-align: center;
-    flex-direction: row;
-    gap: 15px  ;
-}
-
-.WelcomeText {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 10px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.4; 
+    gap: 15px;
 }

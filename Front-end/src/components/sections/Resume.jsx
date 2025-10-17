@@ -93,24 +93,6 @@ export default function Resume() {
                     </SkillTag>
                   </div>
                 </div>
-                {/* <div className={styles.SkillsSection}>
-                  <h4 className={styles.SkillsTitle}>Soft Skills:</h4>
-                  <div className={styles.SkillsList}>
-                    <SkillTag color="soft-skill">
-                      Proatividade na resolução de problemas
-                    </SkillTag>
-                    <SkillTag color="soft-skill">
-                      Foco em entrega e resultado{" "}
-                    </SkillTag>
-                    <SkillTag color="soft-skill">
-                      Organização e gestão de tempo
-                    </SkillTag>
-                    <SkillTag color="soft-skill">Trabalho em equipe</SkillTag>
-                    <SkillTag color="soft-skill">
-                      Adaptabilidade e aprendizado contínuo
-                    </SkillTag>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>

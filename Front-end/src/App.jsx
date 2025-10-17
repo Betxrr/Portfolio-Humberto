@@ -5,7 +5,7 @@ import Hero from "./components/sections/Hero.jsx";
 import Works from "./components/sections/Works.jsx";
 import Resume from "./components/sections/Resume.jsx";
 import Contact from "./components/sections/Contact.jsx";
-import FloatingActions from "./components/UI/FloatingActions.jsx"; // Caminho corrigido
+import FloatingActions from "./components/UI/FloatingActions.jsx";
 
 export default function App() {
   return (

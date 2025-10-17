@@ -14,8 +14,12 @@ export default function Hero() {
             Olá! eu sou
             <div className={style.TrianguloDialogo}></div>
           </div>
-          <h1 className={style.NomePrincipal}>{"<"} Humberto</h1>
-          <h1 className={style.NomeSecundario}>Rodrigues .. {">"}</h1>
+          
+
+          <h1 className={style.NomePrincipal}>
+            <span className={style.typingEffect}>{"<"} Humberto Rodrigues .. </span>{">"}
+          </h1>
+          
           <h3 className={style.Cargo}>Desenvolvedor Front-end</h3>
           <h3 className={style.Tags}>
             {" "}
@@ -42,7 +46,7 @@ export default function Hero() {
         </div>
       </div>
       <div className={style.RightContainer}>
-        <div className={style.ImageContainer}></div>
+        {/* Futuramente, o conteúdo do RightContainer virá aqui */}
       </div>
     </section>
   );
