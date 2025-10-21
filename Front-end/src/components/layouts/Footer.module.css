@@ -6,7 +6,10 @@
   align-items: center;
   justify-content: center;
   border-top: rgba(165, 165, 165, 0.464) 2px solid;
-  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2); /* sombra projetada para cima */
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;            
+  padding-bottom: 16px;         
+  overflow: hidden;              
 }
 
 .section::before {

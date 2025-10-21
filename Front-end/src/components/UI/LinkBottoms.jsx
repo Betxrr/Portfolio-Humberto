@@ -2,6 +2,10 @@ import React from "react";
 import styles from "./LinkBottoms.module.css"; 
 
 export default function LinkBottoms({ href, children, Icon, target, download, bottomStyle }) {
+
+  
+
+      
   return (
     <a
       href={href}

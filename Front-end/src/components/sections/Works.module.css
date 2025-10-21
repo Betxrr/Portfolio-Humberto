@@ -28,6 +28,8 @@
     scroll-margin-top: -20px; 
     padding-top: 20px;
       scroll-margin-top: -68px;
+        border-left: 1px solid rgb(148, 148, 148);
+  border-right: 1px solid rgb(148, 148, 148);
 
 }
 

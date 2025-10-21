@@ -3,6 +3,7 @@ import styles from "./FloatingActions.module.css";
 import { FaArrowUp, FaWhatsapp } from 'react-icons/fa';
 
 export default function FloatingActions() {
+    
     const [isVisible, setIsVisible] = useState(false);
 
     // ... (suas funções scrollToTop e openWhatsApp permanecem iguais) ...
