@@ -78,3 +78,44 @@
 .espacamento {
   height: 192px; /* Espaçamento de 12px */
 }
+
+/* ... (estilos existentes) */
+
+.paragraph {
+  font-size: 0.858rem; /* Tamanho Desktop */
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Adicione esta Media Query no final */
+@media (max-width: 900px) {
+  .paragraph {
+    font-size: 0.8rem; /* Tamanho um pouco menor para mobile */
+  }
+  .title {
+    font-size: 1.1rem; /* Título interno menor */
+  }
+  .TextContainer {
+     padding: 0 15px; /* Menos padding lateral no texto */
+  }
+  .BottomNav {
+      padding: 10px 15px; /* Menos padding nos controles */
+  }
+  .NavButton {
+     padding: 6px 10px; /* Botões menores */
+     font-size: 0.9rem;
+  }
+  .PageInfo {
+     font-size: 0.8rem; /* Info de página menor */
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraph {
+    font-size: 0.75rem; /* Tamanho ainda menor */
+  }
+   .title {
+    font-size: 1rem;
+  }
+}

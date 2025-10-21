@@ -6,7 +6,7 @@
   gap: 4px;
   border-radius: 4px;
   padding: 4px 10px;
-  font-size: 0.75rem;
+  font-size: 0.75rem; /* Tamanho Desktop */
   font-weight: bold;
   margin: 2px 0;
   white-space: nowrap;
@@ -70,4 +70,27 @@
 .nestjs {
   background-color: #E0234E;
   color: #fff;
+}
+
+/* --- Media Query para Telas Menores --- */
+@media (max-width: 768px) {
+  .skillTag {
+    font-size: 0.7rem; /* Fonte um pouco menor */
+    padding: 3px 8px; /* Padding um pouco menor */
+    gap: 3px; /* Gap menor */
+  }
+
+  /* Opcional: Reduzir tamanho do ícone se houver um específico */
+  .skillTag svg { /* Seletor genérico para o ícone */
+     /* Se você definiu um tamanho fixo no JSX, talvez precise ajustar lá */
+     /* Ou pode tentar: */
+     /* width: 16px; */
+     /* height: 16px; */
+  }
+}
+
+@media (max-width: 480px) {
+   .skillTag {
+    font-size: 0.65rem; /* Ainda menor */
+  }
 }
