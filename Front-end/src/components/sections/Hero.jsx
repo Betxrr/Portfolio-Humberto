@@ -4,7 +4,7 @@ import LinkBottoms from "../UI/LinkBottoms";
 import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
-  const cvPath = "/curriculo-humberto.pdf"; 
+  const cvPath = "curriculo-humberto.pdf"; 
 
   return (
     <section className={style.section} id="hero">

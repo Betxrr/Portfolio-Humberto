@@ -51,7 +51,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: -2; /* Camada mais baixa */
+  z-index: -2;
 
   /* Caminho corrigido para dev local */
   background-image: url('/images/JapaneseGeometricDesign/Abstract-Image.jpg');

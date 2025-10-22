@@ -20,8 +20,8 @@ export default function Works() {
         <div className={styles.ProjectsGrid}>
           <Project
             images={[
-              "/images/ProjectImages/Imagens-Portifolio.png",
-              "/images/ProjectImages/Imagens-Portifolio2.png",
+              "images/ProjectImages/Imagens-Portifolio.png",
+              "images/ProjectImages/Imagens-Portifolio2.png",
             ]}
             title="Meu Portfólio"
             description=" Meu portfólio foi o meu primeiro projeto sério publicado, foram praticamente 4 telas com uma estilização pesada, que, apesar do exagero desnecessário, serviu para eu entender e demonstrar conhecimento sobre componentes reutilizáveis, animações, CSS Module, HTML, Responsividade em telas grandes e pequenas e etc..."
