@@ -1,4 +1,5 @@
 .ProjectCard {
+    /* Estilos base mantidos - Estes são para Desktop */
     flex: 1 1 calc(33.33% - 32px); 
     max-width: calc(33.33% - 32px); 
     background: #2e2e2e;
@@ -11,12 +12,9 @@
 }
 
 
-/* src/components/UI/Project.module.css */
-
-/* SUBSTITUA SEU .ProjectImage POR ESTAS DUAS REGRAS ABAIXO */
-
+/* Imagem do Projeto */
 .ProjectImageContainer {
-    position: relative; /* Para posicionar a imagem e os botões */
+    position: relative; 
     width: 95%;
     aspect-ratio: 16 / 9;
     margin: 12px auto 0;
@@ -36,7 +34,7 @@
     cursor: pointer;
 }   
 
-
+/* Botões da Imagem */
 .ImageButton {
     position: absolute;
     top: 50%;
@@ -61,18 +59,12 @@
     opacity: 1;
 }
 
-.ImageButtonLeft {
-    left: 10px; 
-}
+.ImageButtonLeft { left: 10px; }
+.ImageButtonRight { right: 10px; }
 
-.ImageButtonRight {
-    right: 10px;
-}
+.ProjectImage:hover .ImageButton { opacity: 1; }
 
-.ProjectImage:hover .ImageButton {
-    opacity: 1;
-}
-
+/* Informações do Projeto */
 .ProjectInfo {
     padding: 20px;
     flex: 1;
@@ -81,42 +73,30 @@
     justify-content: space-between;
 }
 
-.ProjectInfo h3 {
+.ProjectInfo h3 { /* Título do Projeto */
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Tamanho Desktop */
     color: var(--color-primary-light);
 }
 
-.ProjectInfo p {
+.ProjectInfo p { /* Descrição do Projeto */
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Tamanho Desktop */
     color: var(--color-text-light);
+    line-height: 1.5; 
 }
 
-.ProjectDescription {
-    font-size: 0.500rem;
-    color: #bdbdbd;
-    margin-bottom: 12px;
+/* Seção de Tags */
+.TagsSection {
+    margin-top: 10px; 
 }
 
-.ProjectLink {
-    color: var(--color-primary-light);
-    background: transparent;
-    border: 1px solid var(--color-primary-light);;
-    border-radius: 6px;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    align-self: flex-start;
-    transition: background 0.2s, color 0.2s;
-    margin: auto;
-}
-
-.ProjectLink:hover {
-    background: var(--color-primary-light);
-    color: #fff;
+.TagsSection h3 { /* Título "Tecnologias usadas:" */
+    font-size: 1rem; /* Tamanho Desktop */
+    color: #ccc; 
+    margin-bottom: 8px; 
 }
 
 .TagsContainer {
@@ -126,20 +106,61 @@
     margin-top: 8px;
 }
 
+/* Link do Projeto */
 .LinhaCentralizada {
-  width: 20rem;
-  height: 2px;
+  width: 90%; 
+  max-width: 18rem; 
+  height: 1px; 
   background: rgba(255, 255, 255, 0.178);
-  margin:20px ;
-  border-radius: 2px;
+  margin: 20px auto; 
+  border-radius: 1px;
   border: none;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .ProjectLinkSection {
     margin-top: 16px;
     text-align: center;
     padding-bottom: 8px;
+}
+
+.ProjectLink {
+    color: var(--color-primary-light);
+    background: transparent;
+    border: 1px solid var(--color-primary-light);;
+    border-radius: 6px;
+    padding: 10px 18px; /* Padding Desktop */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Tamanho Desktop */
+    align-self: flex-start;
+    transition: background 0.2s, color 0.2s;
+    margin: auto; 
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.ProjectLink:hover {
+    background: var(--color-primary-light);
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .ProjectsGrid {
+    justify-content: center; 
+  }
+  .ProjectCard {
+    flex-basis: calc(50% - 32px); 
+   
+  }
+}
+
+@media (max-width: 768px) {
+  .ProjectCard {
+    flex-basis: 100%; 
+    max-width: 100%;
+  }
+
+
+
 }

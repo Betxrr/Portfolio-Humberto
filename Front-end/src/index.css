@@ -41,31 +41,35 @@ body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
   line-height: 0.8;
-  position: relative; 
-  background-color: #fff; 
-  margin: 0;
+  position: relative;
+  background-color: #fff;
+  margin: 0; /* Correção do espaço no footer */
 }
 
+/* Imagem de fundo principal */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -2;
 
+  /* Caminho corrigido para dev local */
   background-image: url('/images/JapaneseGeometricDesign/Abstract-Image.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  
+
   animation: subtleSlideIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
+/* Degradê branco da esquerda */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -1; /* Camada do meio */
 
+  /* Degradê padrão para desktop */
   background: linear-gradient(to right, #fff 0%, #fff 45%, transparent 70%);
 }
 
@@ -97,4 +101,10 @@ p {
 a {
   text-decoration: none;
   color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  body::after {
+    background: linear-gradient(to right, #fff 0%, #fff 80%, transparent 100%);
+  }
 }

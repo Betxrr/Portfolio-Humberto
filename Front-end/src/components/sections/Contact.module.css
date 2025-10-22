@@ -1,40 +1,55 @@
 .section {
     display: flex;
-    min-height: 40vh;
+    min-height: 40vh; /* Altura mínima original */
     background: #212121af;
     color: white;
     align-items: center;
     justify-content: center;
+    padding: 30px 0; /* Adiciona padding vertical */
 }
 
 .Limiter {
     width: 100%;
-    max-width: 90.9%;
-    padding: 24px 5px;
+    max-width: 90.9%; /* Mantém o limiter */
+    padding: 24px 15px; /* Padding ajustado para mobile */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: stretch; /* Mantém stretch */
 }
 
 .ContactTitle {
     color: var(--color-primary-light);
     font-weight: bold;
-    font-size: 1.7rem;
-    padding-bottom: 25px;
+    font-size: 1.7rem; /* Tamanho Desktop */
+    padding-bottom: 20px; /* Padding Desktop */
 }
 
 .ContactList {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    font-size: 1rem;
+    gap: 15px; /* Gap Desktop */
+    font-size: 1rem; /* Tamanho Base Desktop */
 }
 
 .ContactItem {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px; /* Gap Desktop */
+    /* Adiciona word-break para emails longos */
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.ContactItem span {
+   line-height: 1.4; /* Melhora leitura em mobile */
+}
+
+.ContactLinks {
+    display: flex;
+    gap: 18px; /* Gap Desktop */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha */
+    justify-content: flex-start; /* Alinha botões à esquerda */
 }
 
 
@@ -45,13 +60,12 @@
     gap: 6px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.15rem;
+    font-size: 1.15rem; /* Tamanho Desktop */
     width: fit-content;
     background: #fff;
     border-radius: 8px;
-    padding: 8px 18px;
-        border: 2px solid #606060;
-
+    padding: 8px 18px; /* Padding Desktop */
+    border: 2px solid #606060;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.453);
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
@@ -60,8 +74,7 @@
     background: #fff;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
     transform: translateY(-2px) scale(1.04);
-        border: 2px solid #606060;
-
+    border: 2px solid #606060;
     color: #1976d2;
 }
 
@@ -72,11 +85,11 @@
     gap: 6px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.15rem;
+    font-size: 1.15rem; /* Tamanho Desktop */
     width: fit-content;
     background: #fff;
     border-radius: 8px;
-    padding: 8px 18px;
+    padding: 8px 18px; /* Padding Desktop */
     border: 2px solid #606060;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.453);
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
@@ -89,24 +102,110 @@
     color: #222;
 }
 
-
-
 .ContactDivider {
-    width: 250px;
-    height: 2px;
-    background: linear-gradient(to right, #fff 0%, transparent 100%);
-    margin: 12px 0;
+    width: 250px; /* Largura Desktop */
+    height: 1px; /* Mais fino */
+    background: linear-gradient(to right, #ffffff8a 0%, transparent 100%); /* Suaviza */
+    margin: 15px 0; /* Margem Desktop */
 }
 
-.LinhaCentralizada {
-    width: 180px;
+.FinalMessage {
+   width: 100%;
+   text-align: center;
+   margin-top: 32px;
+   color: #fff;
+   font-style: italic;
+   font-size: 1.08rem; /* Tamanho Desktop */
+   padding-bottom: 16px;
+   line-height: 1.5; /* Melhora legibilidade */
+}
+
+
+.LinhaCentralizada { /* Linha final */
+    width: 180px; /* Largura Desktop */
     height: 1px;
     background: white;
     border-radius: 2px;
     border: none;
     display: block;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto; /* Centraliza */
+}
+
+
+/* --- Media Query para Telas Menores --- */
+@media (max-width: 768px) {
+    .section {
+      min-height: unset; /* Remove altura mínima */
+    }
+
+    .Limiter {
+       max-width: 95%; /* Limiter um pouco maior */
+       padding: 24px 10px; /* Menos padding lateral */
+    }
+
+    .ContactTitle {
+        font-size: 1.4rem; /* Título menor */
+        padding-bottom: 15px; /* Menos padding */
+    }
+
+    .ContactList {
+        gap: 12px; /* Menos gap */
+        font-size: 0.9rem; /* Fonte base menor */
+    }
+
+    .ContactItem {
+        gap: 8px; /* Menos gap */
+    }
+
+    /* Reduzir tamanho dos ícones dos itens, se necessário */
+    .ContactItem svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .ContactLinks {
+        gap: 12px; /* Menos gap entre botões */
+        justify-content: center; /* Centraliza os botões */
+    }
+
+    .ContactLinkdin, .ContactLinkGithub {
+        font-size: 1rem; /* Botões menores */
+        padding: 6px 14px; /* Padding menor */
+    }
+     /* Reduzir ícones dos botões */
+    .ContactLinkdin svg, .ContactLinkGithub svg {
+       width: 24px;
+       height: 24px;
+    }
+
+    .ContactDivider {
+        width: 80%; /* Linha relativa */
+        margin: 12px auto; /* Centraliza */
+    }
+
+    .FinalMessage {
+        font-size: 0.9rem; /* Mensagem final menor */
+        margin-top: 25px;
+    }
+
+    .LinhaCentralizada {
+        width: 150px; /* Linha final menor */
+    }
+}
+
+/* Opcional: Ajuste fino para telas muito pequenas */
+@media (max-width: 480px) {
+    .ContactTitle {
+        font-size: 1.2rem;
+    }
+     .ContactList {
+        font-size: 0.8rem;
+    }
+     .ContactLinkdin, .ContactLinkGithub {
+        font-size: 0.9rem;
+        padding: 5px 12px;
+    }
+     .FinalMessage {
+        font-size: 0.8rem;
+    }
 }

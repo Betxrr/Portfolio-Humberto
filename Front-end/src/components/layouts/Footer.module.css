@@ -1,25 +1,16 @@
 .section {
   display: flex;
-  min-height: 32vh;
+  min-height: 28vh; /* Altura menor no geral */
   background: var(--color-primary);
   color: #fff;
   align-items: center;
   justify-content: center;
   border-top: rgba(165, 165, 165, 0.464) 2px solid;
-  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px 0; /* Adiciona padding vertical */
 }
 
-.section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  border-top: 3px solid rgba(69, 69, 69, 0.25);
-}
+/* ::before removido pois não parecia necessário e poderia conflitar */
 
 .section > * {
   position: relative;
@@ -28,9 +19,9 @@
 
 .limiter {
   width: 100%;
-  max-width: 700px;
+  max-width: 90%; /* Limiter maior */
   margin: auto;
-  padding: 24px 32px;
+  padding: 20px 15px; /* Padding ajustado */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -38,19 +29,37 @@
   text-align: center;
   background: transparent;
   border-radius: 18px;
-  box-shadow: none; /* Remove sombra duplicada */
+  box-shadow: none;
 }
 
 .text {
   line-height: 1.6;
   margin-bottom: 8px;
+  font-size: 0.9rem; /* Tamanho base um pouco menor */
 }
 
+/* Estilo específico para o nome principal no Footer */
+.footerName {
+   font-weight: bold;
+   font-size: 1.1rem; /* Tamanho Desktop */
+   text-decoration: underline;
+   margin-bottom: 10px; /* Adiciona espaço abaixo */
+}
+
+/* Estilo para a citação */
+.footerQuote {
+  font-style: italic;
+  font-size: 0.85rem; /* Tamanho Desktop */
+  color: #eee; /* Cor um pouco mais suave */
+  margin: 16px 0;
+}
+
+
 .LinhaCentralizada {
-  width: 320px;
+  width: 280px; /* Largura Desktop */
   height: 1px;
   background: #fff;
-  margin: 18px auto;
+  margin: 15px auto; /* Margem ajustada */
   border-radius: 2px;
   border: none;
   display: block;
@@ -59,4 +68,42 @@
 
 .bold {
   font-weight: bold;
+}
+
+/* --- Media Query para Telas Menores --- */
+@media (max-width: 768px) {
+    .section {
+        min-height: unset; /* Remove altura mínima */
+    }
+    .limiter {
+      max-width: 95%;
+      padding: 15px 10px;
+    }
+    .text {
+        font-size: 0.8rem; /* Fonte menor */
+    }
+    .footerName {
+       font-size: 1rem; /* Nome menor */
+    }
+    .footerQuote {
+       font-size: 0.75rem; /* Citação menor */
+       margin: 12px 0;
+    }
+    .LinhaCentralizada {
+        width: 80%; /* Largura relativa */
+        margin: 12px auto;
+    }
+}
+
+/* Opcional: Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+    .text {
+        font-size: 0.75rem;
+    }
+     .footerName {
+       font-size: 0.9rem;
+    }
+    .footerQuote {
+       font-size: 0.7rem;
+    }
 }

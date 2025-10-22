@@ -3,21 +3,22 @@
 
 @media (max-width: 1200px) {
   .ProjectsGrid {
-    justify-content: center; 
+    justify-content: center;
   }
   .ProjectCard {
-    flex-basis: calc(50% - 32px);
-    max-width: calc(50% - 32px);
+    flex: 0 1 98%;
+    max-width: 98%;
+    margin: 0 auto; /* centraliza */
   }
 }
 
 @media (max-width: 768px) {
   .ProjectCard {
-    flex-basis: 100%;
-    max-width: 100%;
+    flex: 0 1 9%;
+    max-width: 98%;
+    margin: 0 auto;
   }
 }
-
 /* Estilos da Works */
 
 .section {
@@ -28,6 +29,8 @@
     scroll-margin-top: -20px; 
     padding-top: 20px;
       scroll-margin-top: -68px;
+        border-left: 1px solid rgb(148, 148, 148);
+  border-right: 1px solid rgb(148, 148, 148);
 
 }
 
@@ -36,7 +39,7 @@
     max-width: 94%;
     margin-left: auto;
     margin-right: auto;
-    padding: 24px 32px;
+    
     display: flex;
     flex-direction: column;
 }

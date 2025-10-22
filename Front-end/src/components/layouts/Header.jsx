@@ -35,23 +35,23 @@ export default function Header() {
           <ul>
             <li>
               <a href="#hero">
-                <FaHome /> Home
+                <FaHome /> <span>Home</span>
               </a>
             </li>
             <li>
               <a href="#resume">
                 <IoDocumentText />
-                Sobre Mim
+                <span>Sobre Mim</span>
               </a>
             </li>
             <li>
               <a href="#works">
-                <FaBriefcase /> Projetos{" "}
+                <FaBriefcase /> <span>Projetos </span>
               </a>
             </li>
             <li>
               <a href="#contact">
-                <FaEnvelope /> Contatos
+                <FaEnvelope /> <span>Contatos</span>
               </a>
             </li>
           </ul>

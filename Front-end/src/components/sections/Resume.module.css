@@ -23,7 +23,7 @@
 }
 
 .SkillsTitle {
-  font-size: 1.7rem;
+  font-size: 1.7rem; /* Tamanho Desktop */
   font-weight: bold;
   color: var(--color-primary-light);
   margin-bottom: var(--spacing-small);
@@ -34,13 +34,15 @@
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xsmall);
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: flex-start; /* Alinha à esquerda */
+  flex-wrap: wrap; /* Permite quebrar linha */
+  width: 100%; /* Garante que ocupe a largura disponível */
 }
 
 .SkillItem {
+  /* Estilos padrão mantidos */
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: var(--spacing-xsmall);
   color: var(--color-text-dark);
   border-radius: 4px;
@@ -78,7 +80,7 @@
   min-height: 700px;
   border: gray solid 2px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Padrão Desktop */
   overflow: hidden;
 }
 
@@ -86,13 +88,13 @@
   background:#2e2e2e;
   color: var(--color-text-light);
   font-weight: bold;
-  flex: 0 0 40%;
+  flex: 0 0 40%; /* Largura Desktop */
   display: flex;
   justify-content: center;
   align-items: center;
   border-top-left-radius: 26px;
   border-bottom-left-radius: 26px;
-  padding-right: 30px;
+  padding: 30px; /* Padding geral desktop */
 }
 
 .HeaderResumeLeft {
@@ -107,29 +109,31 @@
   background: white;
   color: #222;
   z-index: 3;
-  flex: 1 1 60%;
+  flex: 1 1 60%; /* Largura Desktop */
   border-left: rgba(128, 128, 128, 0.396) solid 2px;
   box-shadow: -12px 0 24px -8px rgba(0, 0, 0, 0.18);
   border-top-right-radius: 26px;
   border-bottom-right-radius: 26px;
+  display: flex;
+  flex-direction: column;
 }
 
 .ResumeLeft {
-  max-width: 650px;
+  max-width: 100%; /* Ajustado para não ter max-width fixo */
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* Alinhamento Desktop */
   justify-content: flex-start;
-  margin: 1.25rem;
+  /* margin removida, controlada pelo padding do pai */
   gap: var(--spacing-small);
   box-sizing: border-box;
 }
 
 .ResumePhoto {
-  width: 13.25rem;
-  height: 12.625rem;
+  width: 13.25rem; /* Tamanho Desktop */
+  height: 12.625rem; /* Tamanho Desktop */
   overflow: hidden;
   border: 3px solid #cfcfcf;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
@@ -152,46 +156,41 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  margin: 1.25rem;
-  flex: 1; 
+  margin: 1.25rem; /* Margem Desktop */
+  flex: 1;
 }
 
-
-
 .ResumeTitle {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Tamanho Desktop */
   font-weight: bold;
   color: var(--color-primary);
-  margin-top: 50px;
+  margin-top: 50px; /* Margem Topo Desktop */
   text-align: left;
   padding-left: 18px;
 }
 
 .ResumeText {
-  font-size: 0.9em;
+  font-size: 0.9em; /* Tamanho Desktop */
   color: var(--color-text-dark);
   line-height: 1.7;
-
-  flex: 1; 
-  display: flex; /* Permite que o filho (.paginationContainer) use height: 100% */
+  flex: 1;
+  display: flex;
 }
 
 .LinhaCentralizada {
-  width: 20.75rem;
+  width: 20.75rem; /* Largura Desktop */
   height: 2px;
   background: rgba(255, 255, 255, 0.178);
-  margin: var(--spacing-small);
+  margin: var(--spacing-small) auto; /* Centraliza horizontalmente */
   border-radius: 2px;
   border: none;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .NomeCentralizado {
-  font-size: 1.7rem;
+  font-size: 1.7rem; /* Tamanho Desktop */
   font-weight: bold;
   text-align: center;
   margin-top: 2px;
@@ -201,18 +200,24 @@
 .LocalizacaoTexto {
   display: flex;
   align-items: center;
-  gap: 8px; 
- 
-  font-size: 0.95rem; 
-  font-weight: 400; 
+  gap: 8px;
+  font-size: 0.95rem; /* Tamanho Desktop */
+  font-weight: 400;
   color: white;
-  margin-bottom: 8px; 
+  margin-bottom: 8px;
+  /* Adicionado para quebrar texto longo como o link do LinkedIn */
+  word-break: break-word; 
+  overflow-wrap: break-word;
 }
 
 .LocalizacaoTexto a {
   color: #fff !important;
-  font-weight: 400; 
+  font-weight: 400;
+      line-height: 18px;
+
   text-decoration: none;
+  /* Adicionado para ajudar na quebra */
+   display: inline-block; 
 }
 
 .LocalizacaoTexto a:hover {
@@ -222,57 +227,133 @@
 
 .LocationIcon {
   color: #ffffff;
-  font-size: 1.2em;
+  font-size: 1.2em; /* Tamanho Desktop */
+  flex-shrink: 0;
 }
 
-/* Media Queries para Responsividade */
 
 @media (max-width: 1200px) {
   .ContainerBox {
-    flex-direction: column;
+    flex-direction: column; /* Empilha as colunas */
+    min-height: unset; /* Remove altura mínima fixa */
+    width: 95%; /* Aumenta um pouco a largura */
   }
 
   .PrimaryColorBackground,
   .WhiteBackground {
-    flex-basis: auto;
+    flex-basis: auto; /* Remove base flex fixa */
     width: 100%;
-    border-radius: 0;
+    border-radius: 0; /* Remove cantos arredondados intermediários */
+    border-left: none; /* Remove borda entre colunas */
+    box-shadow: none; /* Remove sombra entre colunas */
+    padding: 20px; /* Padding geral para tablet */
   }
-
-.WhiteBackground {
-  background: white;
-  color: #222;
-  z-index: 3;
-  flex: 1 1 60%;
-  border-left: rgba(128, 128, 128, 0.396) solid 2px;
-  box-shadow: -12px 0 24px -8px rgba(0, 0, 0, 0.18);
-  border-top-right-radius: 26px;
-  border-bottom-right-radius: 26px;
-  display: flex; /* Adicionado */
-  flex-direction: column; /* Adicionado */
-}
 
   .PrimaryColorBackground {
-    border-top-left-radius: 26px;
-    border-top-right-radius: 26px;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: 26px; /* Mantém canto superior */
+    border-top-right-radius: 26px; /* Mantém canto superior */
+    border-bottom-left-radius: 0; /* Remove canto inferior */
   }
+
+   .WhiteBackground {
+    border-top-right-radius: 0; /* Remove canto superior */
+    border-bottom-left-radius: 26px; /* Mantém canto inferior */
+    border-bottom-right-radius: 26px; /* Mantém canto inferior */
+   }
+
+   .ResumeLeft {
+   }
+
+   .ResumeRight {
+      margin: 0; /* Remove margem */
+      padding: 15px 0 0 0; /* Adiciona padding superior */
+   }
+
+   .ResumeTitle {
+      margin-top: 20px; /* Reduz margem topo */
+      padding-left: 0; /* Remove padding */
+   }
 }
 
 @media (max-width: 900px) {
-  .ResumeFlex {
-    flex-direction: column;
-    gap: 0;
+  /* .ResumeFlex já está como column em 1200px, não precisa redefinir */
+  /* .ResumeLeft já está alinhado ao centro em 1200px */
+
+  .PrimaryColorBackground {
+     padding: 20px 15px; /* Reduz padding horizontal */
   }
 
-  .ResumeLeft {
-    align-items: center;
-    padding-top: 0;
-    padding-left: 5px;
+  .ResumePhoto {
+    width: 10rem; /* Reduz tamanho da foto */
+    height: 9.5rem; /* Reduz tamanho da foto */
   }
 
-  .ResumeRight {
-    padding: 24px 10px;
-    margin: 0;
+  .NomeCentralizado {
+    font-size: 1.4rem; /* Reduz fonte do nome */
   }
+
+  .LocalizacaoTexto {
+    font-size: 0.85rem; /* Reduz fonte dos contatos */
+    gap: 6px; /* Diminui gap */
+  }
+
+   .LocationIcon {
+     font-size: 1.1em; /* Reduz ícone */
+   }
+
+   .LinhaCentralizada {
+      width: 90%; /* Linha mais larga */
+      margin-top: 15px;
+      margin-bottom: 15px;
+   }
+
+   .SkillsTitle {
+      font-size: 1.4rem; /* Reduz título skills */
+      width: 100%; /* Garante centralização */
+   }
+
+   .SkillsList {
+     justify-content: left; /* Alinha as tags à esquerda quando quebram linha */
+     gap: 5px; /* Aumenta um pouco o gap entre tags */
+   }
+
+   .ResumeTitle {
+     font-size: 1.5rem; /* Reduz título "Sobre Mim" */
+   }
+
+   .ResumeRight {
+     /* Ajustes de padding já feitos em 1200px */
+   }
+}
+
+/* Opcional: Breakpoint extra para telas muito pequenas */
+@media (max-width: 480px) {
+  .ContainerBox {
+    width: 95%; /* Ocupa toda a largura */
+
+  }
+   .PrimaryColorBackground, .WhiteBackground {
+     padding: 15px 10px; /* Reduz mais o padding */
+   }
+
+   .ResumePhoto {
+    width: 8rem; /* Foto ainda menor */
+    height: 7.6rem; 
+  }
+
+  .NomeCentralizado {
+    font-size: 1.2rem; 
+  }
+
+  .LocalizacaoTexto {
+    font-size: 0.75rem; 
+  }
+
+  .SkillsTitle {
+      font-size: 1.2rem; 
+   }
+
+  .ResumeTitle {
+     font-size: 1.3rem; 
+   }
 }

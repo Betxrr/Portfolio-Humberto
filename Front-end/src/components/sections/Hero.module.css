@@ -1,4 +1,4 @@
-/* DEFINIÇÃO DAS ANIMAÇÕES (@keyframes)              */
+/* DEFINIÇÃO DAS ANIMAÇÕES (@keyframes) */
 
 @keyframes typing {
   from { width: 0; }
@@ -7,7 +7,7 @@
 
 @keyframes blink-caret-infinite {
   from, to { border-color: transparent; }
-  50% { border-color: black; } 
+  50% { border-color: black; }
 }
 
 @keyframes slideUpAndFadeIn {
@@ -20,84 +20,44 @@
   to { opacity: 1; }
 }
 
+/* --- ESTILOS GERAIS (DESKTOP FIRST) --- */
 
-
+.section {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    background-attachment: scroll;
+    color: var(--color-text-dark);
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px; 
+    box-sizing: border-box;
+}
 
 .LeftContainer {
   flex: 1;
   max-width: 680px; 
-  
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
 }
 
-.CaixaDeDialogo {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-out 0.2s forwards;
-}
-
-.NomePrincipal {
-  font-size: 2.8rem;
-  font-weight: bold;
-  color: #222;
-  text-align: left;
-  padding-bottom: 0.1em;
-  white-space: nowrap; 
-
-  display: flex;          
-  align-items: baseline;
-}
-
-
-.typingEffect {
-  display: inline-block;
-  overflow: hidden; 
-  white-space: nowrap; 
-  border-right: 4px solid black; 
-  width: 0;
-  box-sizing: border-box;
-  padding-bottom: 0.2em; 
-  padding-top: 0.2em;   
-
-  vertical-align: bottom; 
-
-  animation: 
-    typing 3s steps(25, end) forwards,
-    blink-caret-infinite 0.75s step-end infinite;
-  animation-delay: 0.5s;
-}
-
-.Cargo, .Tags, .Frase, .LinhaCentralizada, .DescricaoBemVindo, .BottomLimiter {
-  opacity: 0;
-  animation: slideUpAndFadeIn 0.7s ease-out forwards;
-}
-
-.Cargo { animation-delay: 3.8s; }
-.Tags { animation-delay: 4.0s; }
-.Frase { animation-delay: 4.2s; }
-.LinhaCentralizada { animation-delay: 4.4s; }
-.DescricaoBemVindo { animation-delay: 4.6s; }
-.BottomLimiter { animation-delay: 4.8s; }
-
-
-/* O RESTO DO ARQUIVO .css */
-
-.LinhaCentralizada {
-    width: 320px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary) 60%, #fff 100%);
-    margin: 18px auto;
-    margin-top: 32px;
-    border-radius: 2px;
-    border: none;
-    display: block;
+.RightContainer {
+    flex: 1.5;
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 .TopperLimiter {
     width: 100%;
-    max-width: 800px; 
     margin-left: auto;
     margin-right: auto;
     padding: 24px 32px;
@@ -107,50 +67,29 @@
     align-items: stretch;
 }
 
-.section {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-    border: none;
-    position: relative;
-    overflow: hidden; 
-    background-attachment: scroll;
-    color: var(--color-text-dark);
-    align-items: center;
-    justify-content: center;
-    padding: 40px 80px;
-    box-sizing: border-box;
-}
-
-.RightContainer {
-    flex: 1;
-    display: flex;
-    color: white;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-}
-
 .CaixaDeDialogo {
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;   
+    color: white;
     padding: 20px 20px;
     border-radius: 10px;
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid white;
     margin-bottom: 40px;
-    align-self: center;
+    align-self: center; 
     width: auto;
     min-width: unset;
     max-width: 80%;
     position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+    text-align: center;
 }
 
 .TrianguloDialogo {
     position: absolute;
     left: 50%;
+    transform: translateX(-50%); /* Centraliza o triângulo */
     top: 100%;
     margin-top: 0px;
     width: 0;
@@ -161,12 +100,47 @@
     z-index: 1;
 }
 
+.NomePrincipal {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  text-align: left; /* Mantém alinhado à esquerda no desktop */
+  padding-bottom: 0.1em;
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  /* Remove margem para controlar no TopperLimiter se necessário */
+  margin: 0; 
+}
+
+.typingEffect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid black;
+  width: 0; /* Controlado pela animação */
+  box-sizing: border-box;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+  vertical-align: bottom;
+  animation:
+    typing 3s steps(25, end) forwards,
+    blink-caret-infinite 0.75s step-end infinite;
+  animation-delay: 0.5s;
+}
+
+.Cargo, .Tags, .Frase, .LinhaCentralizada, .DescricaoBemVindo, .BottomLimiter {
+  opacity: 0;
+  animation: slideUpAndFadeIn 0.7s ease-out forwards;
+}
+
 .Cargo {
     font-size: 1.5rem;
     color: #555;
     margin-top: 30px;
     font-weight: 600;
-    text-align: center;
+    text-align: center; /* Centralizado */
+    animation-delay: 3.8s;
 }
 
 .Tags {
@@ -174,16 +148,8 @@
     color: #555;
     margin-top: 7px;
     font-weight: 600;
-    text-align: center;
-}
-    
-.DescricaoBemVindo {
-    font-size: 1rem;
-    color: #555;
-    padding-top: 15px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.4;
+    text-align: center; /* Centralizado */
+    animation-delay: 4.0s;
 }
 
 .Frase {
@@ -191,18 +157,141 @@
     color: #555;
     margin-top: 20px;
     font-weight: 500;
-    text-align: center;
+    text-align: center; /* Centralizado */
     line-height: 1.4;
     font-style: italic;
+    animation-delay: 4.2s;
+}
+
+.LinhaCentralizada {
+    width: 320px; /* Largura fixa no desktop */
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary) 60%, #fff 100%);
+    margin: 32px auto 18px auto; /* Ajuste margem (top, horizontal, bottom) */
+    border-radius: 2px;
+    border: none;
+    display: block;
+    animation-delay: 4.4s;
+}
+
+.DescricaoBemVindo {
+    font-size: 1rem;
+    color: #555;
+    padding-top: 15px; /* Já tem no CSS original */
+    font-weight: 500;
+    text-align: center; /* Centralizado */
+    line-height: 1.4;
+    animation-delay: 4.6s;
 }
 
 .BottomLimiter {
     width: 100%;
     box-sizing: border-box;
     display: flex;
+    flex-direction: row; /* Linha no desktop */
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     gap: 15px;
     padding-left: 3px;
+    animation-delay: 4.8s;
+}
+
+/* --- Media Query para Telas Menores (Mobile) --- */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Empilha Left e Right */
+        padding: 40px 5px; /* Reduz padding horizontal */
+        min-height: unset; /* Permite altura menor se o conteúdo couber */
+        height: 100vh; /* Tenta ocupar a tela inteira */
+        justify-content: center; /* Centraliza verticalmente */
+    }
+
+    .LeftContainer {
+        max-width: 100%; /* Ocupa toda a largura */
+        flex: none; /* Remove a propriedade flex: 1 */
+        justify-content: center; /* Centraliza conteúdo interno */
+        height: auto; /* Altura baseada no conteúdo */
+    }
+
+    .RightContainer {
+        display: none; /* Esconde o container vazio */
+    }
+
+    .TopperLimiter {
+        padding: 15px; /* Reduz padding interno */
+        align-items: center; /* Centraliza itens como Nome, Cargo, etc. */
+    }
+
+    .CaixaDeDialogo {
+       font-size: 0.9rem;
+       padding: 15px;
+       margin-bottom: 30px;
+       max-width: 90%; /* Ajusta largura máxima */
+    }
+
+.NomePrincipal {
+        font-size: 1.5rem; /* Tente este tamanho, ajuste se precisar menor */
+        white-space: nowrap; /* Força a ficar na mesma linha */
+        text-align: center; 
+        justify-content: center; 
+        margin: 0 auto; /* Ajuda a centralizar o conjunto */
+        width: fit-content; /* Faz o container ter a largura do texto */
+        max-width: 95%; /* Evita que ultrapasse a tela em casos extremos */
+        overflow: hidden; /* Garante que não vaze */
+    }
+    
+    .typingEffect {
+       font-size: 1.5rem; /* Mesmo tamanho do NomePrincipal */
+       border-right-width: 2px; 
+       white-space: nowrap; /* Força a ficar na mesma linha */
+       display: inline-block; /* Importante para nowrap funcionar bem */
+       text-align: left; 
+    }
+
+    .Cargo {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .Tags {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .Frase {
+        font-size: 0.8rem;
+        margin-top: 15px;
+        margin-left: 30px;
+        margin-right: 30px;
+
+    }
+
+    .LinhaCentralizada {
+        width: 80%; /* Largura relativa */
+        margin-top: 25px;
+        margin-bottom: 15px;
+    background: linear-gradient(90deg, #fff 20%, var(--color-primary) 100%); /* Gradiente invertido */
+    }
+
+    .DescricaoBemVindo {
+        font-size: 0.9rem;
+        padding-top: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+    }
+
+    .BottomLimiter {
+        flex-direction: column; /* Empilha os botões */
+        gap: 15px; /* Mantém o gap vertical */
+        margin-top: 25px;
+        align-items: center; /* Centraliza os botões */
+    }
+
+    /* Opcional: Reduzir tamanho/padding dos botões se ainda estourarem */
+    .BottomLimiter > a { /* Seletor para os LinkBottoms dentro do limiter */
+       padding: 15px 24px;
+       font-size: 0.9rem;
+    }
 }
