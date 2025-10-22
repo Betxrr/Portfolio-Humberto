@@ -3,6 +3,8 @@
     min-height: 40vh; /* Altura mínima original */
     background: #212121af;
     color: white;
+            border-left: 1px solid rgb(148, 148, 148);
+  border-right: 1px solid rgb(148, 148, 148);
     align-items: center;
     justify-content: center;
     padding: 30px 0; /* Adiciona padding vertical */
