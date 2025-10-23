@@ -5,6 +5,7 @@ import { FaReact, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaMobileAlt, FaGithub }
 import { SiRedux, SiNestjs } from 'react-icons/si';
 import { MdApi } from "react-icons/md";
 import { ImCog } from "react-icons/im";
+import { VscSymbolEvent } from 'react-icons/vsc';
 
 const iconMap = {
   react: FaReact,
@@ -15,7 +16,7 @@ const iconMap = {
   git: FaGitAlt,
   github: FaGithub,
   api: MdApi,
-  redux: SiRedux,
+  redux: VscSymbolEvent,
   nestjs: SiNestjs,
 };
 

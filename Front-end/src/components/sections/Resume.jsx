@@ -90,7 +90,7 @@ export default function Resume() {
                       GitHub
                     </SkillTag>
                     <SkillTag icon={SiRedux} color="redux">
-                      Redux (básico)
+                      Context API + useReducer
                     </SkillTag>
                     <SkillTag icon={MdApi} color="api">
                       APIs REST (Express)
