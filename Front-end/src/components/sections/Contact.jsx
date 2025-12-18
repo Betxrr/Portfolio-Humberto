@@ -28,11 +28,11 @@ export default function Contact() {
                     </div>
                     <div className={styles.ContactItem}>
                         <FiPhone color="var(--color-primary-light)" size={24} />
-                        <span>Telefone: <strong>(47) 99991-5500</strong></span>
+                        <span>Telefone: <strong>(47) 99162-0840</strong></span>
                     </div>
                     <div className={styles.ContactItem}>
                         <FiMessageCircle color="var(--color-primary-light)" size={24} />
-                        <span>WhatsApp: <strong>(47) 99991-5500</strong></span>
+                        <span>WhatsApp: <strong>(47) 99162-0840</strong></span>
                     </div>
                     <div className={styles.ContactDivider}></div>
                     <h2 className={styles.ContactTitle}>Redes Sociais:</h2>

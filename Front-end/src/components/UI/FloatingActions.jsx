@@ -12,7 +12,7 @@ export default function FloatingActions() {
     };
 
     const openWhatsApp = () => {
-        const phoneNumber = '5547999915500';
+        const phoneNumber = '5547991620840';
         const message = 'Olá, Humberto! Vi seu portfólio e gostaria de conversar.';
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
     };
