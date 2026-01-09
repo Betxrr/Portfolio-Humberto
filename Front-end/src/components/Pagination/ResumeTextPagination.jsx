@@ -8,7 +8,7 @@ export default function TextPagination() {
     <div key="page-1">
       <h4 className={style.title}>Meu resumo Pessoal / Profissional:</h4>
       <p className={style.paragraph}>
-        Sou um desenvolvedor Front-end e Mobile com foco em React e React Native
+        Sou um desenvolvedor Web/Mobile com foco em React e React Native
         CLI, formado em análise e desenvolvimento de sistemas.
       </p>
       <p className={style.paragraph}>
@@ -28,7 +28,7 @@ export default function TextPagination() {
       </p>
       <p className={style.paragraph}>
         Agora há quase 1 ano eu tenho me dedicado estritamente a me tornar um
-        desenvolvedor Web/Mobile Front-end completo, com foco em React e React
+        desenvolvedor Web/Mobile completo, com foco em React e React
         Native CLI, baseando meus conhecimentos e estudos na visão de outros
         profissionais já consolidados na área que são próximos a mim, e tentando
         cada vez mais mostrar que eu possuo sim uma visão profissional

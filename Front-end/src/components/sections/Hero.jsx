@@ -20,14 +20,14 @@ export default function Hero() {
             <span className={style.typingEffect}>{"<"} Humberto Rodrigues .. </span>{">"}
           </h1>
           
-          <h3 className={style.Cargo}>Desenvolvedor Front-end</h3>
+          <h3 className={style.Cargo}>Desenvolvedor</h3>
           <h3 className={style.Tags}>
             {" "}
             <span style={{ color: "var(--color-primary)" }}>Web </span> |{" "}
             <span style={{ color: "var(--color-primary)" }}>Mobile</span>
           </h3>
           <p className={`${style.Frase}`}>
-            " Da concepção ao código, construo soluções front-end que unem
+            " Da concepção ao código, construo soluções que unem
             funcionalidade, usabilidade e experiência de usuário "
           </p>
           <div className={style.LinhaCentralizada}></div>
