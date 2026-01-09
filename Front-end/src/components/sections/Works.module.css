@@ -1,6 +1,23 @@
 
 /* Responsive adjustments for different screen sizes */
 
+
+@media (max-width: 2560px) {
+  /* 2K ou menor: 3 cards por linha */
+  .ProjectCard {
+    flex: 1 1 calc(33.33% - 32px);
+    max-width: calc(33.33% - 32px);
+  }
+}
+
+@media (max-width: 1920px) {
+  /* HD: 2 cards por linha */
+  .ProjectCard {
+    flex: 1 1 calc(50% - 32px);
+    max-width: calc(50% - 32px);
+  }
+}
+
 @media (max-width: 1200px) {
   .ProjectsGrid {
     justify-content: center;
@@ -45,12 +62,12 @@
 }
 
 .ProjectsGrid {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 32px; 
-    width: 100%;
-    margin-top: 24px;
-    justify-content: space-between; 
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 32px; 
+  width: 100%;
+  margin-top: 24px;
+  justify-content: flex-start;
 }
 
 .ProjectCard {

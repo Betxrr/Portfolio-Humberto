@@ -71,30 +71,15 @@ export default function Resume() {
                 <div className={styles.SkillsSection}>
                   <h4 className={styles.SkillsTitle}>Hard Skills:</h4>
                   <div className={styles.SkillsList}>
-                    <SkillTag icon={FaReact} color="react">
-                      React Js
-                    </SkillTag>
-                    <SkillTag icon={FaMobileAlt} color="react-native">
-                      React Native CLI ( Android )
-                    </SkillTag>
-                    <SkillTag icon={ImCog} color="nestjs">
-                      Nest Js
-                    </SkillTag>
-                    <SkillTag icon={FaDatabase} color="sql">
-                      SQL Server
-                    </SkillTag>
-                    <SkillTag icon={FaGitAlt} color="git">
-                      Git
-                    </SkillTag>
-                    <SkillTag icon={AiFillGithub} color="github">
-                      GitHub
-                    </SkillTag>
-                    <SkillTag icon={SiRedux} color="redux">
-                      Context API + useReducer
-                    </SkillTag>
-                    <SkillTag icon={MdApi} color="api">
-                      APIs REST (Express)
-                    </SkillTag>
+                    <SkillTag color="react">React.js</SkillTag>
+                    <SkillTag color="typescript">TypeScript</SkillTag>
+                    <SkillTag color="tailwind">Tailwind CSS</SkillTag>
+                    <SkillTag color="redux">Context API + useReducer</SkillTag>
+                    <SkillTag color="zod">Zod + React Hook Form</SkillTag>
+                    <SkillTag color="sql">SQL Server</SkillTag>
+                    <SkillTag color="nodejs">Node.js</SkillTag>
+                    <SkillTag color="postman">Postman</SkillTag>
+                    <SkillTag color="api">APIs REST</SkillTag>
                   </div>
                 </div>
               </div>

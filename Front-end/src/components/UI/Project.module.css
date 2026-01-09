@@ -1,25 +1,48 @@
+/* Descrição com rolagem e altura fixa para uniformizar os cards */
+.ProjectDescriptionScroll {
+    max-height: 120px;
+    min-height: 120px;
+    overflow-y: auto;
+    margin-bottom: 4px;
+    padding-right: 2px;
+    font-size: 0.95em;
+    line-height: 1.35;
+}
+
+.ProjectInfoWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 10px 10px 10px;
+    min-height: 0;
+}
 .ProjectCard {
-    /* Estilos base mantidos - Estes são para Desktop */
-    flex: 1 1 calc(33.33% - 32px); 
-    max-width: calc(33.33% - 32px); 
+    flex: 1 1 calc(33.33% - 32px);
+    max-width: calc(33.33% - 32px);
+    min-height: 420px;
     background: #2e2e2e;
-    border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     border: 2px solid #858585;
+    margin: 12px 4px;
 }
 
 
 /* Imagem do Projeto */
 .ProjectImageContainer {
-    position: relative; 
-    width: 95%;
-    aspect-ratio: 16 / 9;
-    margin: 12px auto 0;
-    overflow: hidden; 
-    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 16/9;
+    max-height: 260px;
+    min-height: 120px;
+    margin: 16px auto 0 auto;
+    overflow: hidden;
+    border-radius: 7px;
     background-color: #232323;
 }
 
@@ -32,7 +55,9 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
-}   
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
 
 /* Botões da Imagem */
 .ImageButton {
@@ -66,11 +91,11 @@
 
 /* Informações do Projeto */
 .ProjectInfo {
-    padding: 20px;
-    flex: 1;
+    padding: 10px 0 0 0;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    min-height: 0;
 }
 
 .ProjectInfo h3 { /* Título do Projeto */
@@ -90,7 +115,7 @@
 
 /* Seção de Tags */
 .TagsSection {
-    margin-top: 10px; 
+    margin-top: 2px;
 }
 
 .TagsSection h3 { /* Título "Tecnologias usadas:" */
@@ -102,26 +127,26 @@
 .TagsContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
+    gap: 6px;
+    margin-top: 2px;
 }
 
 /* Link do Projeto */
 .LinhaCentralizada {
-  width: 90%; 
-  max-width: 18rem; 
-  height: 1px; 
-  background: rgba(255, 255, 255, 0.178);
-  margin: 20px auto; 
+    width: 80%;
+    height: 1px;
+    margin: 12px auto 8px auto;
   border-radius: 1px;
   border: none;
   display: block;
 }
 
 .ProjectLinkSection {
-    margin-top: 16px;
+    margin-top: 12px;
     text-align: center;
-    padding-bottom: 8px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: auto;
 }
 
 .ProjectLink {

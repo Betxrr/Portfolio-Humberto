@@ -1,3 +1,28 @@
+/* Novas cores para tags adicionadas */
+.typescript {
+  background-color: #3178c6;
+  color: #fff;
+}
+
+.tailwind {
+  background-color: #38bdf8;
+  color: #fff;
+}
+
+.zod {
+  background-color: #4b5563;
+  color: #fff;
+}
+
+.nodejs {
+  background-color: #83cd29;
+  color: #222;
+}
+
+.postman {
+  background-color: #ff6c37;
+  color: #fff;
+}
 /* src/components/Tags/SkillTag.module.css */
 
 .skillTag {

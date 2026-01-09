@@ -9,6 +9,11 @@ import { VscSymbolEvent } from 'react-icons/vsc';
 
 const iconMap = {
   react: FaReact,
+  typescript: FaJs, // Substituir por ícone TypeScript se disponível
+  tailwind: FaCss3Alt, // Substituir por ícone Tailwind se disponível
+  zod: ImCog, // Zod não tem ícone, usar engrenagem
+  nodejs: ImCog, // Substituir por ícone Node.js se disponível
+  postman: MdApi, // Substituir por ícone Postman se disponível
   'react-native': FaMobileAlt,
   javascript: FaJs,
   css: FaCss3Alt,

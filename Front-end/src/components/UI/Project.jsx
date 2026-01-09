@@ -14,12 +14,16 @@ export default function Project({
   return (
     <div className={styles.ProjectCard}>
       <ProjectImage images={images} />
-      <ProjectInfo
-        title={title}
-        description={description}
-        technologies={technologies}
-        projectUrl={projectUrl}
-      />
+      <div className={styles.ProjectInfoWrapper}>
+        <ProjectInfo
+          title={title}
+          description={
+            <div className={styles.ProjectDescriptionScroll}>{description}</div>
+          }
+          technologies={technologies}
+          projectUrl={projectUrl}
+        />
+      </div>
     </div>
   );
 }
