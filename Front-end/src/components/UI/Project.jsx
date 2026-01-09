@@ -17,9 +17,7 @@ export default function Project({
       <div className={styles.ProjectInfoWrapper}>
         <ProjectInfo
           title={title}
-          description={
-            <div className={styles.ProjectDescriptionScroll}>{description}</div>
-          }
+          description={description}
           technologies={technologies}
           projectUrl={projectUrl}
         />

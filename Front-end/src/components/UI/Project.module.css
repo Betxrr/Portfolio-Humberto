@@ -1,12 +1,26 @@
 /* Descrição com rolagem e altura fixa para uniformizar os cards */
 .ProjectDescriptionScroll {
     max-height: 120px;
-    min-height: 120px;
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
     margin-bottom: 4px;
     padding-right: 2px;
     font-size: 0.95em;
     line-height: 1.35;
+    box-sizing: border-box;
+}
+
+.ProjectDescriptionScroll::-webkit-scrollbar {
+    width: 8px;
+    background: #222;
+}
+.ProjectDescriptionScroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.ProjectDescriptionScroll {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #222;
 }
 
 .ProjectInfoWrapper {
@@ -15,7 +29,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 8px 10px 10px 10px;
-    min-height: 0;
+    overflow: visible;
 }
 .ProjectCard {
     flex: 1 1 calc(33.33% - 32px);
@@ -95,7 +109,8 @@
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    min-height: 0;
+    /* min-height removido para evitar rolagem duplicada */
+    overflow: visible;
 }
 
 .ProjectInfo h3 { /* Título do Projeto */

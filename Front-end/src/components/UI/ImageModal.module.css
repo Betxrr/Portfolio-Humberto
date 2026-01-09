@@ -1,3 +1,36 @@
+.modalNavLeft {
+  position: absolute;
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 1001;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalNavRight {
+  position: absolute;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 1001;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .modalOverlay {
   position: fixed; 
   top: 0;
@@ -22,11 +55,19 @@
 
 .closeHint {
   position: fixed;
-  top: 55px;
-  right: 160px;
+  top: 32px;
+  right: 32px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 2rem;
+  font-size: 2.2rem;
   z-index: 1001;
-  
-  pointer-events: none;
+  pointer-events: auto;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 4px 12px;
+  transition: background 0.2s;
+}
+.closeHint:hover {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
 }

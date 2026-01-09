@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect } from "react";
 import styles from "./ImageModal.module.css";
-import { FaTimes } from "react-icons/fa"; // Ícone "X"
+import { FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Ícones
 
 const overlayVariants = {
   visible: { opacity: 1 },
@@ -13,18 +13,24 @@ const modalVariants = {
   hidden: { scale: 0.95, opacity: 0 },
 };
 
-export default function ImageModal({ src, onClose }) {
+export default function ImageModal({ src, onClose, onPrev, onNext, hasPrev, hasNext }) {
   useEffect(() => {
-    const handleEsc = (event) => {
+    const handleKey = (event) => {
       if (event.key === 'Escape') {
         onClose();
       }
+      if (event.key === 'ArrowLeft' && typeof onPrev === 'function' && hasPrev) {
+        onPrev();
+      }
+      if (event.key === 'ArrowRight' && typeof onNext === 'function' && hasNext) {
+        onNext();
+      }
     };
-    window.addEventListener('keydown', handleEsc);
+    window.addEventListener('keydown', handleKey);
     return () => {
-      window.removeEventListener('keydown', handleEsc);
+      window.removeEventListener('keydown', handleKey);
     };
-  }, [onClose]);
+  }, [onClose, onPrev, onNext, hasPrev, hasNext]);
 
   const handleOverlayClick = (event) => {
     if (event.target === event.currentTarget) {
@@ -42,9 +48,20 @@ export default function ImageModal({ src, onClose }) {
       exit="hidden"
       transition={{ duration: 0.3 }}
     >
-      <div className={styles.closeHint} aria-hidden="true">
+      <button className={styles.closeHint} aria-label="Fechar" onClick={onClose}>
         <FaTimes />
-      </div>
+      </button>
+
+      {hasPrev && (
+        <button className={styles.modalNavLeft} onClick={onPrev} aria-label="Imagem anterior">
+          <FaArrowLeft size={32} />
+        </button>
+      )}
+      {hasNext && (
+        <button className={styles.modalNavRight} onClick={onNext} aria-label="Próxima imagem">
+          <FaArrowRight size={32} />
+        </button>
+      )}
 
       <motion.img 
         src={src} 

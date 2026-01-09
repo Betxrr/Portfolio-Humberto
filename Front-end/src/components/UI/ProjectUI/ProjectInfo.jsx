@@ -7,7 +7,7 @@ export default function ProjectInfo({ title, description, technologies, projectU
   return (
     <div className={styles.ProjectInfo}>
       <h3>{title}</h3>
-      <p>{description}</p>
+      <div className={styles.ProjectDescriptionScroll}>{description}</div>
       
       <div className={styles.TagsSection}>
         <h3>Tecnologias usadas:</h3>

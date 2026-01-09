@@ -61,6 +61,10 @@ export default function ProjectImage({ images = [] }) {
           <ImageModal
             src={images[currentImageIndex]}
             onClose={closeModal}
+            onPrev={() => handleImageChange("left")}
+            onNext={() => handleImageChange("right")}
+            hasPrev={images.length > 1}
+            hasNext={images.length > 1}
           />
         )}
       </AnimatePresence>
