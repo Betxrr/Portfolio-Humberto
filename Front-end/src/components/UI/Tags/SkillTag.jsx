@@ -30,7 +30,7 @@ export default function SkillTag({ icon, color, children }) {
 
   return (
     <span className={`${styles.skillTag} ${styles[color]}`}>
-      {IconComponent && <IconComponent size={18} />}
+      {IconComponent && <IconComponent size="1em" />}
       {children}
     </span>
   );

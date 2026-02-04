@@ -2,16 +2,8 @@
 /* Responsive adjustments for different screen sizes */
 
 
-@media (max-width: 2560px) {
-  /* 2K ou menor: 3 cards por linha */
-  .ProjectCard {
-    flex: 1 1 calc(33.33% - 32px);
-    max-width: calc(33.33% - 32px);
-  }
-}
-
 @media (max-width: 1920px) {
-  /* HD: 2 cards por linha */
+  /* HD e abaixo: 2 cards por linha */
   .ProjectCard {
     flex: 1 1 calc(50% - 32px);
     max-width: calc(50% - 32px);
@@ -45,14 +37,14 @@
     color: white;
     scroll-margin-top: -20px; 
     padding-top: 20px;
-    scroll-margin-top: -68px;
+    scroll-margin-top: -35px;
     border-left: 1px solid rgb(148, 148, 148);
     border-right: 1px solid rgb(148, 148, 148);
 }
 
 .Limiter {
     width: 100%;
-    max-width: 94%;
+  max-width: 96%;
     margin-left: auto;
     margin-right: auto;
     
@@ -67,6 +59,12 @@
   width: 100%;
   margin-top: 24px;
   justify-content: flex-start;
+}
+
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+  .ProjectsGrid {
+    gap: 0px;
+  }
 }
 
 .ProjectCard {

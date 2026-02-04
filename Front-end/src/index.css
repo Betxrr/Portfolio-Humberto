@@ -108,3 +108,9 @@ a {
     background: linear-gradient(to right, #fff 0%, #fff 80%, transparent 100%);
   }
 }
+
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+  html {
+    font-size: 112.5%;
+  }
+}

@@ -45,6 +45,63 @@
     margin: 12px 4px;
 }
 
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+    .ProjectCard {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+        margin: 12px 0;
+    }
+
+    .ProjectCard :global(.skillTag) {
+        font-size: 1rem;
+        padding: 6px 10px;
+        gap: 4px;
+    }
+}
+
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+    .ProjectCard {
+        min-height: 580px;
+        margin: 24px 10px;
+    }
+
+    .ProjectImageContainer {
+        max-height: 330px;
+        margin-top: 24px;
+    }
+
+    .ProjectInfoWrapper {
+        padding: 20px 16px 20px 16px;
+    }
+
+    .ProjectDescriptionScroll {
+        max-height: 220px;
+        line-height: 1.6;
+    }
+
+    .ProjectInfo h3 {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .ProjectInfo p {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .TagsSection {
+        margin-top: 10px;
+    }
+
+    .LinhaCentralizada {
+        margin: 20px auto 12px auto;
+    }
+
+    .ProjectLinkSection {
+        margin-top: 20px;
+    }
+}
+
 
 /* Imagem do Projeto */
 .ProjectImageContainer {

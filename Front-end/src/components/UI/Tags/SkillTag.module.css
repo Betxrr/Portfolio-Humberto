@@ -37,6 +37,11 @@
   white-space: nowrap;
 }
 
+.skillTag svg {
+  width: 1em;
+  height: 1em;
+}
+
 .react {
   background-color: #61DAFB;
   color: #222;
@@ -117,5 +122,14 @@
 @media (max-width: 480px) {
    .skillTag {
     font-size: 0.65rem; /* Ainda menor */
+  }
+}
+
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+  .skillTag {
+    font-size: 1.15rem;
+    padding: 8px 14px;
+    gap: 6px;
+    border-radius: 6px;
   }
 }

@@ -119,3 +119,35 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .paragraph {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  .TextContainer {
+    padding: 0 40px;
+  }
+
+  .TextArea {
+    padding: 36px 0;
+  }
+
+  .BottomNav {
+    padding: 16px 40px;
+  }
+
+  .NavButton {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+
+  .PageInfo {
+    font-size: 1rem;
+  }
+}

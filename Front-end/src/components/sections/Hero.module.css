@@ -64,7 +64,8 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    --hero-title-width: 32ch;
 }
 
 .CaixaDeDialogo {
@@ -132,6 +133,8 @@
 .Cargo, .Tags, .Frase, .LinhaCentralizada, .DescricaoBemVindo, .BottomLimiter {
   opacity: 0;
   animation: slideUpAndFadeIn 0.7s ease-out forwards;
+    max-width: var(--hero-title-width);
+    width: 100%;
 }
 
 .Cargo {
@@ -164,7 +167,7 @@
 }
 
 .LinhaCentralizada {
-    width: 320px; /* Largura fixa no desktop */
+    width: min(320px, var(--hero-title-width)); /* Não ultrapassa o título */
     height: 3px;
     background: linear-gradient(90deg, var(--color-primary) 60%, #fff 100%);
     margin: 32px auto 18px auto; /* Ajuste margem (top, horizontal, bottom) */
@@ -195,6 +198,75 @@
     gap: 15px;
     padding-left: 3px;
     animation-delay: 4.8s;
+}
+
+.BottomLimiter > a {
+    white-space: nowrap;
+}
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .TopperLimiter {
+        --hero-title-width: 36ch;
+    }
+    .LeftContainer {
+        max-width: 980px;
+    }
+
+    .TopperLimiter {
+        padding: 28px 40px;
+    }
+
+    .NomePrincipal {
+        font-size: 3.4rem;
+        width: fit-content;
+        max-width: none;
+        overflow: visible;
+    }
+
+    .typingEffect {
+        border-right-width: 5px;
+        max-width: none;
+    }
+
+    .Cargo {
+        font-size: 1.8rem;
+        margin-top: 36px;
+    }
+
+    .Tags {
+        font-size: 1.4rem;
+    }
+
+    .Frase {
+        font-size: 1.05rem;
+        line-height: 1.55;
+    }
+
+    .LinhaCentralizada {
+        width: 380px;
+        height: 4px;
+        margin: 36px auto 20px auto;
+    }
+
+    .DescricaoBemVindo {
+        font-size: 1.15rem;
+    }
+
+    .BottomLimiter {
+        margin-top: 28px;
+        gap: 20px;
+    }
+
+    .BottomLimiter > a {
+        padding-left: 36px;
+        padding-right: 36px;
+        font-size: 1.05rem;
+    }
+
+    .CaixaDeDialogo {
+        font-size: 1.2rem;
+        padding: 24px 24px;
+    }
 }
 
 /* --- Media Query para Telas Menores (Mobile) --- */

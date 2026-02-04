@@ -84,6 +84,59 @@
   overflow: hidden;
 }
 
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+  .section {
+    min-height: 100vh;
+  }
+
+  .ContainerBox {
+    min-height: 85vh;
+  }
+
+  .PrimaryColorBackground {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .ResumeLeft {
+    height: 100%;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .NomeCentralizado {
+    font-size: 2rem;
+  }
+
+  .LocalizacaoTexto {
+    font-size: 1.1rem;
+    line-height: 1.45;
+  }
+
+  .SkillsTitle {
+    font-size: 1.9rem;
+  }
+
+  .SkillItem {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+
+  .ResumePhoto {
+    width: 15rem;
+    height: 14.25rem;
+  }
+
+  .ResumeRight {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .ResumeTitle {
+    margin-top: 60px;
+  }
+}
+
 .PrimaryColorBackground {
   background:#2e2e2e;
   color: var(--color-text-light);
@@ -190,7 +243,7 @@
 }
 
 .NomeCentralizado {
-  font-size: 1.7rem; /* Tamanho Desktop */
+  font-size: 1.8rem; /* Tamanho Desktop */
   font-weight: bold;
   text-align: center;
   margin-top: 2px;
@@ -357,4 +410,39 @@
   .ResumeTitle {
      font-size: 1.3rem; 
    }
+}
+
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+  .NomeCentralizado {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 2048px) and (min-height: 1048.8px) {
+  .ResumePhoto {
+    width: 17.5rem;
+    height: 16.75rem;
+  }
+
+  .LocalizacaoTexto {
+    font-size: 1.4rem;
+  }
+
+  .SkillsTitle {
+    font-size: 2.2rem;
+  }
+
+  .SkillItem {
+    font-size: 1.25rem;
+    padding: 10px 14px;
+  }
+
+  .ResumeTitle {
+    font-size: 2.4rem;
+  }
+
+  .ResumeText {
+    font-size: 1.3rem;
+    line-height: 2.05;
+  }
 }
