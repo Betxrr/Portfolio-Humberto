@@ -19,7 +19,7 @@ export default function TextPagination() {
               análise e desenvolvimento de sistemas.
             </p>
             <p className={style.paragraph}>
-              Trabalhei 3 anos e meio como Desenvolvedor júnior, eu era responsável
+              Trabalhei 3 anos como Desenvolvedor júnior, eu era responsável
               por criar documentações e planilhas em HTML, CSS, JavaScript e SQL
               Server. Eu também era responsável por fazer envio direto de atualizações
               para produção e possuía contato direto com os clientes. Participava de

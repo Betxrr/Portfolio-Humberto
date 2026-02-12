@@ -68,7 +68,7 @@
 }
 
 .paragraph {
-  font-size: 0.858rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 8px;
   color: #333;
@@ -79,19 +79,10 @@
   height: 192px; /* Espaçamento de 12px */
 }
 
-/* ... (estilos existentes) */
-
-.paragraph {
-  font-size: 0.858rem; /* Tamanho Desktop */
-  line-height: 1.6;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-/* Adicione esta Media Query no final */
+/* Media Queries */
 @media (max-width: 900px) {
   .paragraph {
-    font-size: 0.8rem; /* Tamanho um pouco menor para mobile */
+    font-size: 0.9rem;
   }
   .title {
     font-size: 1.1rem; /* Título interno menor */
@@ -113,7 +104,7 @@
 
 @media (max-width: 480px) {
   .paragraph {
-    font-size: 0.75rem; /* Tamanho ainda menor */
+    font-size: 0.85rem;
   }
    .title {
     font-size: 1rem;
@@ -126,7 +117,7 @@
   }
 
   .paragraph {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     line-height: 1.8;
   }
 
