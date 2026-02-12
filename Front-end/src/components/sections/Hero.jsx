@@ -4,7 +4,7 @@ import LinkBottoms from "../UI/LinkBottoms";
 import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
-  const cvPath = "curriculo-humberto.pdf"; 
+  const cvPath = "/curriculo-humberto.pdf"; 
 
   return (
     <section className={style.section} id="hero">
@@ -23,8 +23,7 @@ export default function Hero() {
           <h3 className={style.Cargo}>Desenvolvedor</h3>
           <h3 className={style.Tags}>
             {" "}
-            <span style={{ color: "var(--color-primary)" }}>Web </span> |{" "}
-            <span style={{ color: "var(--color-primary)" }}>Mobile</span>
+            <span style={{ color: "var(--color-primary)" }}>Web</span>
           </h3>
           <p className={`${style.Frase}`}>
             " Da concepção ao código, construo soluções que unem
