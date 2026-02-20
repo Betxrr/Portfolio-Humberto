@@ -4,7 +4,7 @@ import LinkBottoms from "../UI/LinkBottoms";
 import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
-  const cvPath = "/curriculo-humberto.pdf"; 
+  const cvPath = `${import.meta.env.BASE_URL}curriculo-humberto.pdf`;
 
   return (
     <section className={style.section} id="hero">
@@ -34,7 +34,7 @@ export default function Hero() {
             Bem-vindo ao meu website e portfólio oficial!
           </p>
           <div className={style.BottomLimiter}>
-            <LinkBottoms href={cvPath} download Icon={FaDownload} bottomStyle={1}>
+            <LinkBottoms href={cvPath} download="curriculo-humberto.pdf" Icon={FaDownload} bottomStyle={1}>
               Baixar CV
             </LinkBottoms>
             
